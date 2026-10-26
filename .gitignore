@@ -1,0 +1,13 @@
+# Klucze i sekrety — NIGDY do repo
+*.ppk
+*.pem
+id_*
+*_deploy
+*_deploy.pub
+avufu_gh_deploy*
+avufu_sftp*
+
+# System
+Thumbs.db
+.DS_Store
+desktop.ini

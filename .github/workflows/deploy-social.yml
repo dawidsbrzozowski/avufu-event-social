@@ -1,0 +1,32 @@
+name: Deploy /social to Hostinger
+
+# Wgrywa grafiki z folderu `social/` tego repo do katalogu
+# /home/u112202089/domains/event.avufu.com/public_html/social na Hostingerze.
+# Odpala się TYLKO przy zmianach w `social/**` — nic innego na stronie nie rusza.
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'social/**'
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload social assets via SCP (SSH)
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USER }}
+          key: ${{ secrets.SFTP_KEY }}
+          # Zrodlo: cala zawartosc folderu `social/` w repo.
+          source: "social/**"
+          # Cel: katalog domeny; dzieki prefiksowi `social/` pliki trafiaja do .../public_html/social/
+          target: "/home/u112202089/domains/event.avufu.com/public_html/"
+          overwrite: true
