@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {"id": "7_dlaczego-w-firmie", "theme": "violet", "slides": [
+      {"kicker": "Integracje i Wigilia", "title": "Dlaczego event *w Waszej firmie*?", "text": "Trzy powody, by tym razem nie wychodzić z biura."},
+      {"title": "Co zyskujecie *u siebie*", "size": 72, "rows": [
+        ["Czas", "Nikt nie dojeżdża. Wieczór zaczyna się zaraz po pracy, w miejscu, które wszyscy znają."],
+        ["Klimat", "Znajoma przestrzeń zmieniona światłem i muzyką robi większe wrażenie niż kolejna sala."],
+        ["Kontrola", "To Wy decydujecie o godzinach, menu i liczbie gości. Bez cudzego regulaminu i rezerwacji z wyprzedzeniem."]]},
+      {"kicker": "Co mówią dane", "stats": [
+        ["71%", "badanych pracowników mówi, że integracje w ich firmie odbywają się głównie w restauracjach"],
+        ["31%", "odczuwa napięcie podczas spotkań integracyjnych"]],
+       "note": "Wniosek: restauracja to wybór domyślny, ale nie jedyny. Własna przestrzeń z dobrą oprawą może dać zespołowi więcej swobody.",
+       "source": "Źródło: Pracuj.pl, badanie „Spotkania integracyjne na miarę oczekiwań”, CAWI, grudzień 2024, N=439 zatrudnionych w wieku 18–65."}
+    ]}
+  ]
+}

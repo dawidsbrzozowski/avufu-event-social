@@ -1,0 +1,230 @@
+{
+ "posts": [
+  {
+   "id": "1_jak-pracujemy",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Jak pracujemy",
+     "title": "Od pierwszej wiadomości do *zdjęć po wydarzeniu*",
+     "text": "Pięć kroków, w których wiecie, co się dzieje i ile to kosztuje."
+    },
+    {
+     "num": "01",
+     "title": "Rozmowa",
+     "text": "Pytamy o datę, liczbę gości, miejsce i cel spotkania."
+    },
+    {
+     "num": "02",
+     "title": "Wizja lokalna",
+     "text": "Sprawdzamy przestrzeń, zasilanie i czas montażu – na miejscu albo podczas wideorozmowy."
+    },
+    {
+     "num": "03",
+     "title": "Oferta w trzech wariantach",
+     "text": "Podstawowy, rozszerzony i premium. Każdy z ceną i jasno opisanym zakresem."
+    },
+    {
+     "num": "04",
+     "title": "Realizacja",
+     "text": "Montujemy sprzęt, prowadzimy wieczór i sprzątamy po sobie."
+    },
+    {
+     "num": "05",
+     "title": "Zdjęcia w 48 godzin",
+     "text": "Po wydarzeniu dostajecie zdjęcia, które możecie pokazać zespołowi.",
+     "cta": "event.avufu.com"
+    }
+   ]
+  },
+  {
+   "id": "2_kim-jestesmy",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Avufu Event",
+     "title": "Mała gala we *własnej przestrzeni*",
+     "size": 104,
+     "text": "Zamieniamy biuro, magazyn lub showroom w miejsce firmowego wieczoru. Światło, dźwięk, scenografia i prowadzenie – bez wynajmu sali.",
+     "list": [
+      "Wrocław i okolice",
+      "Poznań i okolice",
+      "Zespoły od 20 do 150 osób"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3_ukryte-koszty",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Do zapisania",
+     "title": "Ukryte koszty *eventu firmowego*",
+     "text": "Siedem pytań, które warto zadać przed podpisaniem umowy."
+    },
+    {
+     "title": "Zapytajcie wykonawcę:",
+     "size": 64,
+     "olist": [
+      "Czy dojazd i transport sprzętu są w cenie?",
+      "Czy cena obejmuje montaż i demontaż?",
+      "Ile kosztuje każda dodatkowa godzina obsługi?",
+      "Czy sala dolicza opłatę za serwis albo za własne napoje?"
+     ]
+    },
+    {
+     "title": "…i jeszcze:",
+     "size": 64,
+     "start": 5,
+     "olist": [
+      "Kto odpowiada za licencje na muzykę?",
+      "Czy w miejscu wydarzenia wystarczy prądu dla sprzętu?",
+      "Kto sprząta po wydarzeniu i czy jest to wliczone w cenę?"
+     ]
+    },
+    {
+     "title": "Dobra oferta odpowiada na te pytania, *zanim je zadacie*.",
+     "text": "Zapiszcie ten post i wróćcie do niego przy kolejnej wycenie."
+    }
+   ]
+  },
+  {
+   "id": "4_84-procent",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Dane z rynku pracy",
+     "num": "84%",
+     "title": "spotkań integracyjnych sprowadza się do wspólnego posiłku",
+     "size": 64,
+     "source": "Źródło: Pracuj.pl, badanie „Spotkania integracyjne na miarę oczekiwań”, CAWI, grudzień 2024, N=439 zatrudnionych w wieku 18–65."
+    },
+    {
+     "stats": [
+      [
+       "41%",
+       "badanych uważa, że formuła spotkań integracyjnych w ich firmie nie odpowiada ich potrzebom"
+      ],
+      [
+       "31%",
+       "badanych odczuwa napięcie podczas takich spotkań"
+      ]
+     ],
+     "note": "Wniosek: nie trzeba zmieniać miejsca, żeby zmienić klimat. Światło, muzyka i dobry scenariusz robią z kolacji wydarzenie.",
+     "source": "Źródło: Pracuj.pl, badanie „Spotkania integracyjne na miarę oczekiwań”, CAWI, grudzień 2024, N=439 zatrudnionych w wieku 18–65."
+    }
+   ]
+  },
+  {
+   "id": "5_kogo-zatrudnic",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Poradnik",
+     "title": "Kogo zatrudnić do *eventu firmowego*?",
+     "text": "Trzy typy wykonawców i sytuacje, w których każdy z nich się sprawdza."
+    },
+    {
+     "kicker": "Typ 1",
+     "title": "Wypożyczalnia sprzętu",
+     "size": 70,
+     "rows": [
+      [
+       "Daje",
+       "Nagłośnienie, światło i ekran na wybrany dzień."
+      ],
+      [
+       "Nie daje",
+       "Pomysłu, scenografii ani prowadzenia wieczoru."
+      ],
+      [
+       "Kiedy",
+       "Gdy macie w firmie osobę, która zaplanuje i poprowadzi całość."
+      ]
+     ]
+    },
+    {
+     "kicker": "Typ 2",
+     "title": "Agencja pełnej obsługi",
+     "size": 70,
+     "rows": [
+      [
+       "Daje",
+       "Koncepcję, logistykę i koordynację wszystkich podwykonawców."
+      ],
+      [
+       "Nie daje",
+       "Niskiej ceny – płacicie także za koordynację całego projektu."
+      ],
+      [
+       "Kiedy",
+       "Przy dużych wydarzeniach, wyjazdach i imprezach dla kilkuset osób."
+      ]
+     ]
+    },
+    {
+     "kicker": "Typ 3",
+     "title": "Sala lub hotel z pakietem",
+     "size": 70,
+     "rows": [
+      [
+       "Daje",
+       "Miejsce, catering i technikę w jednej ofercie."
+      ],
+      [
+       "Nie daje",
+       "Elastyczności – trzeba wyjść z firmy i zarezerwować termin z wyprzedzeniem."
+      ],
+      [
+       "Kiedy",
+       "Gdy chcecie spędzić wieczór poza biurem."
+      ]
+     ]
+    },
+    {
+     "title": "A jeśli chcecie *efektu gali u siebie*?",
+     "text": "Między wypożyczalnią a agencją jest miejsce na oprawę wydarzenia we własnej przestrzeni firmy. Właśnie tym się zajmujemy.",
+     "cta": "Wrocław, Poznań i okolice"
+    }
+   ]
+  },
+  {
+   "id": "6_rynek-w-liczbach",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Rynek pod lupą",
+     "title": "Branża eventowa w Polsce *w liczbach*",
+     "size": 80,
+     "stats": [
+      [
+       "3 mld zł",
+       "wartość polskiej branży eventowej – ok. 1,5% PKB"
+      ],
+      [
+       "6 tys.",
+       "ponad tyle firm eventowych działało na początku 2026 r. – w 2010 r. było ich mniej niż 2 tys."
+      ],
+      [
+       "53%",
+       "firm eventowych wciąż jest w słabej kondycji finansowej"
+      ]
+     ],
+     "source": "Źródło: analiza Dun & Bradstreet na zlecenie By The People Group, styczeń 2026 (za: Bezprawnik.pl, 30.01.2026)."
+    },
+    {
+     "kicker": "Co z tego wynika dla Waszej firmy",
+     "title": "Wybór jest ogromny. *Sprawdźcie wykonawcę.*",
+     "size": 74,
+     "list": [
+      "Wpis w KRS lub CEIDG",
+      "Umowa z zakresem, terminem i ceną",
+      "Plan awaryjny i sprzęt zapasowy",
+      "Zaliczka tylko na fakturę"
+     ]
+    }
+   ]
+  }
+ ]
+}
