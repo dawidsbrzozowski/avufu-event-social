@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {"id": "8_gdzie-integracje", "theme": "dark", "slides": [
+      {"kicker": "Dane z rynku pracy", "title": "Gdzie firmy robią *integracje*?", "size": 84, "stats": [
+        ["71%", "badanych pracowników mówi, że spotkania integracyjne w ich firmie odbywają się głównie w restauracjach"],
+        ["49%", "uczestniczyło w spotkaniu integracyjnym organizowanym poza miastem"],
+        ["52%", "uważa, że integracja pozytywnie wpływa na relacje w zespole"]],
+       "source": "Źródło: Pracuj.pl, badanie „Spotkania integracyjne na miarę oczekiwań”, CAWI, grudzień 2024, N=439 zatrudnionych w wieku 18–65."},
+      {"kicker": "Co z tego wynika", "title": "Integracja działa. *Miejsce można wybrać inaczej.*", "size": 72,
+       "text": "Ponad połowa badanych widzi wpływ integracji na relacje w zespole. Restauracja i wyjazd to najczęstszy wybór, ale nie jedyny.",
+       "list": ["Mniej logistyki: nikt nie dojeżdża", "Wieczór w przestrzeni, którą zespół zna", "Godziny i program ustalacie sami"]}
+    ]},
+    {"id": "9_konfigurator", "theme": "violet", "slides": [
+      {"kicker": "Firmowa Wigilia", "title": "Jak działa nasz *konfigurator*?", "text": "Sześć wyborów i od razu widzicie orientacyjny koszt wieczoru."},
+      {"title": "Wybieracie *krok po kroku*", "size": 72, "olist": ["Liczba gości", "Poczęstunek", "Napoje", "Nagłośnienie", "Światło", "Obsługa"]},
+      {"title": "Wysyłacie konfigurację, *my wracamy z ofertą*", "size": 72,
+       "text": "Na jej podstawie przygotowujemy ofertę w trzech wariantach i proponujemy termin wizji lokalnej. Konfiguracja do niczego nie zobowiązuje.",
+       "cta": "Link w bio"}
+    ]},
+    {"id": "10_zaproszenie", "theme": "dark", "slides": [
+      {"kicker": "Do zapisania", "title": "Jak napisać zaproszenie na *Wigilię firmową*", "text": "Co powinno się w nim znaleźć i gotowy wzór do skopiowania."},
+      {"title": "Zaproszenie *powinno zawierać*", "size": 72, "list": [
+        "Datę i godzinę – także planowane zakończenie",
+        "Miejsce, np. „sala konferencyjna, 3. piętro”",
+        "Krótki plan wieczoru",
+        "Dress code, jeśli jest",
+        "Termin potwierdzenia obecności",
+        "Pytanie o dietę i alergie"]},
+      {"kicker": "Wzór", "title": "Zapraszamy na *firmową Wigilię*", "size": 64,
+       "note": "Drodzy, 17 grudnia o 16:00 spotykamy się w naszym biurze na wspólnej Wigilii. Zaczniemy od życzeń, potem kolacja i muzyka – zakończenie ok. 20:00. Prosimy o potwierdzenie obecności do 5 grudnia i informację o diecie lub alergiach."}
+    ]},
+    {"id": "11_gdzie-wigilia", "theme": "violet", "slides": [
+      {"kicker": "Dane z rynku pracy", "title": "Gdzie odbywa się *firmowa Wigilia*?", "size": 80, "stats": [
+        ["30%", "w restauracji lub innej wynajętej przestrzeni"],
+        ["19%", "w siedzibie firmy"],
+        ["32%", "firma nie organizuje Wigilii"],
+        ["15%", "nie wie, czy pracodawca ją zorganizuje"]],
+       "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, badanie z listopada 2024, N=730 użytkowników serwisu, publikacja: 5.12.2024."},
+      {"kicker": "Co z tego wynika", "title": "Co piąty badany świętuje *w biurze*", "size": 72,
+       "text": "Wigilia w siedzibie firmy to częsty wybór. Nie musi jednak wyglądać jak zwykły dzień pracy: światło, muzyka i scenariusz zmieniają biuro w miejsce wieczoru.",
+       "note": "Od 2025 r. 24 grudnia jest dniem wolnym od pracy, więc na firmowe spotkania zostaje w tym roku 17 dni roboczych (do 23 grudnia)."}
+    ]},
+    {"id": "12_rytualy", "theme": "dark", "slides": [
+      {"kicker": "Kultura organizacyjna", "title": "Po co firmie *wspólne rytuały*?", "size": 84,
+       "text": "Antropologia opisuje rytuały jako sposób, w jaki grupa potwierdza, że jest wspólnotą. W firmie działa to podobnie.",
+       "list": ["Zaznaczają ważny moment: koniec roku, sukces, pożegnanie", "Dają wszystkim to samo doświadczenie", "Budują wspólną pamięć zespołu"]}
+    ]}
+  ]
+}
