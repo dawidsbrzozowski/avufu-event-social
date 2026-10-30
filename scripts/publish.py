@@ -20,7 +20,7 @@ Sekrety (zmienne srodowiskowe), per profil (EVENT / TRAINING):
 import json, os, sys, time, glob, urllib.request, urllib.parse, urllib.error
 from datetime import datetime, timezone
 
-GRAPH = "https://graph.facebook.com/" + os.environ.get("GRAPH_VERSION", "v21.0")
+GRAPH = "https://graph.facebook.com/" + os.environ.get("GRAPH_VERSION", "v23.0")
 QUEUE_DIR, PUBLISHED_DIR, FAILED_DIR = "queue", "published", "failed"
 
 
