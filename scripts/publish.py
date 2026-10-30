@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Publikator postow avufu na Instagram.
-API: "Instagram API with Instagram Login" -> graph.instagram.com
-(token uzytkownika IG, bez Facebook Page).
+API: Instagram Graph API -> graph.facebook.com
+Token: System User Access Token (SUAT, nie wygasa) z uprawnieniem
+instagram_content_publish. IG_USER_ID = Instagram Business Account id.
 
 Jak dziala:
   - czyta pliki JSON z folderu queue/,
@@ -23,7 +24,7 @@ Facebook (posty na strone FB) = osobne API, dorobimy pozniej. Na razie IG.
 import json, os, sys, time, glob, urllib.request, urllib.parse, urllib.error
 from datetime import datetime, timezone
 
-GRAPH = "https://graph.instagram.com/" + os.environ.get("GRAPH_VERSION", "v23.0")
+GRAPH = "https://graph.facebook.com/" + os.environ.get("GRAPH_VERSION", "v23.0")
 QUEUE_DIR, PUBLISHED_DIR, FAILED_DIR = "queue", "published", "failed"
 
 
