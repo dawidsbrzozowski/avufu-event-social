@@ -1,34 +1,35 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Publikator postow avufu: Instagram + Facebook przez Meta Graph API.
+Publikator postow avufu na Instagram.
+API: "Instagram API with Instagram Login" -> graph.instagram.com
+(token uzytkownika IG, bez Facebook Page).
 
 Jak dziala:
   - czyta pliki JSON z folderu queue/,
   - publikuje te, ktorych czas (publish_at) juz nadszedl,
-  - udane przenosi do published/ (z linkami do postow),
-  - nieudane zostawia w queue/ ze statusem "error" i trescia bledu.
+  - udane przenosi do published/ (z linkiem do posta),
+  - nieudane zostaja w queue/ ze statusem "error" i trescia bledu.
 
 Zero zaleznosci - tylko biblioteka standardowa Pythona.
 Uruchamiany przez .github/workflows/publish.yml (cron / recznie).
 
 Sekrety (zmienne srodowiskowe), per profil (EVENT / TRAINING):
-  <PROFIL>_ACCESS_TOKEN  - dlugozyjacy token strony FB (dziala tez dla IG)
-  <PROFIL>_IG_USER_ID    - ID konta Instagram Business
-  <PROFIL>_PAGE_ID       - ID strony Facebook
+  <PROFIL>_IG_TOKEN    - dlugozyjacy token uzytkownika Instagram (60 dni)
+  <PROFIL>_IG_USER_ID  - ID konta Instagram
+
+Facebook (posty na strone FB) = osobne API, dorobimy pozniej. Na razie IG.
 """
 import json, os, sys, time, glob, urllib.request, urllib.parse, urllib.error
 from datetime import datetime, timezone
 
-GRAPH = "https://graph.facebook.com/" + os.environ.get("GRAPH_VERSION", "v23.0")
+GRAPH = "https://graph.instagram.com/" + os.environ.get("GRAPH_VERSION", "v23.0")
 QUEUE_DIR, PUBLISHED_DIR, FAILED_DIR = "queue", "published", "failed"
 
 
 def creds(profile):
     p = profile.upper()
-    return (os.environ.get(f"{p}_ACCESS_TOKEN"),
-            os.environ.get(f"{p}_IG_USER_ID"),
-            os.environ.get(f"{p}_PAGE_ID"))
+    return os.environ.get(f"{p}_IG_TOKEN"), os.environ.get(f"{p}_IG_USER_ID")
 
 
 def api(path, params, method="POST"):
@@ -41,7 +42,7 @@ def api(path, params, method="POST"):
         with urllib.request.urlopen(req, timeout=90) as r:
             return json.loads(r.read().decode())
     except urllib.error.HTTPError as e:
-        raise RuntimeError(f"Graph API {e.code}: {e.read().decode()}")
+        raise RuntimeError(f"Instagram API {e.code}: {e.read().decode()}")
 
 
 def publish_instagram(token, ig_id, media, caption):
@@ -65,23 +66,6 @@ def publish_instagram(token, ig_id, media, caption):
         return api(mid, {"fields": "permalink", "access_token": token}, "GET").get("permalink", mid)
     except Exception:
         return mid
-
-
-def publish_facebook(token, page_id, media, caption):
-    if not page_id:
-        return None
-    if len(media) == 1:
-        res = api(f"{page_id}/photos",
-                  {"url": media[0], "caption": caption, "access_token": token})
-        pid = res.get("post_id") or res.get("id")
-    else:
-        params = {"message": caption, "access_token": token}
-        for i, m in enumerate(media):
-            fbid = api(f"{page_id}/photos",
-                       {"url": m, "published": "false", "access_token": token})["id"]
-            params[f"attached_media[{i}]"] = json.dumps({"media_fbid": fbid})
-        pid = api(f"{page_id}/feed", params).get("id")
-    return f"https://facebook.com/{pid}"
 
 
 def is_due(post):
@@ -110,18 +94,18 @@ def main():
             print(f"Jeszcze nie czas: {os.path.basename(f)} ({post.get('publish_at')})")
             continue
         profile = post.get("profile", "event")
-        token, ig, page = creds(profile)
+        token, ig = creds(profile)
         if not token:
             print(f"POMIJAM {os.path.basename(f)}: brak sekretow dla profilu '{profile}'")
             continue
-        networks = post.get("networks", ["instagram", "facebook"])
         media, caption = post.get("media", []), post.get("caption", "")
+        networks = post.get("networks", ["instagram"])
         try:
             results = {}
             if "instagram" in networks:
                 results["instagram"] = publish_instagram(token, ig, media, caption)
             if "facebook" in networks:
-                results["facebook"] = publish_facebook(token, page, media, caption)
+                results["facebook"] = "POMINIETO (publikacja FB jeszcze nie skonfigurowana)"
             post.update(status="published",
                         published_at=datetime.now(timezone.utc).isoformat(),
                         results=results)

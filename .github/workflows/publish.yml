@@ -32,12 +32,10 @@ jobs:
       - name: Publikuj zalegle posty
         env:
           GRAPH_VERSION: v23.0
-          EVENT_ACCESS_TOKEN: ${{ secrets.EVENT_ACCESS_TOKEN }}
-          EVENT_IG_USER_ID:  ${{ secrets.EVENT_IG_USER_ID }}
-          EVENT_PAGE_ID:     ${{ secrets.EVENT_PAGE_ID }}
-          TRAINING_ACCESS_TOKEN: ${{ secrets.TRAINING_ACCESS_TOKEN }}
-          TRAINING_IG_USER_ID:  ${{ secrets.TRAINING_IG_USER_ID }}
-          TRAINING_PAGE_ID:     ${{ secrets.TRAINING_PAGE_ID }}
+          EVENT_IG_TOKEN:      ${{ secrets.EVENT_IG_TOKEN }}
+          EVENT_IG_USER_ID:    ${{ secrets.EVENT_IG_USER_ID }}
+          TRAINING_IG_TOKEN:   ${{ secrets.TRAINING_IG_TOKEN }}
+          TRAINING_IG_USER_ID: ${{ secrets.TRAINING_IG_USER_ID }}
         run: python scripts/publish.py
 
       - name: Zapisz zmiany w kolejce
