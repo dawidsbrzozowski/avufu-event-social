@@ -2,7 +2,7 @@ name: Deploy /social to Hostinger
 
 # Wgrywa grafiki z folderu `social/` tego repo do katalogu
 # /home/u112202089/domains/event.avufu.com/public_html/social na Hostingerze.
-# Odpala się TYLKO przy zmianach w `social/**` — nic innego na stronie nie rusza.
+# Odpala sie przy zmianach w `social/**` (oraz recznie) — nic innego na stronie nie rusza.
 
 on:
   push:
@@ -25,8 +25,25 @@ jobs:
           port: ${{ secrets.SFTP_PORT }}
           username: ${{ secrets.SFTP_USER }}
           key: ${{ secrets.SFTP_KEY }}
-          # Zrodlo: cala zawartosc folderu `social/` w repo.
-          source: "social/**"
-          # Cel: katalog domeny; dzieki prefiksowi `social/` pliki trafiaja do .../public_html/social/
+          # Zrodlo: CALY katalog `social` (bez glob `**` — jednoznaczne tarowanie
+          # z zachowaniem struktury; `social/**` wczesniej nie wgrywal plikow).
+          source: "social"
+          # Cel: docroot domeny. tar zachowuje prefiks `social/`, wiec pliki
+          # ladauja w .../public_html/social/...
           target: "/home/u112202089/domains/event.avufu.com/public_html/"
           overwrite: true
+          rm: false
+
+      - name: Weryfikacja — co jest na serwerze
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USER }}
+          key: ${{ secrets.SFTP_KEY }}
+          script: |
+            DIR=/home/u112202089/domains/event.avufu.com/public_html/social
+            echo "Plikow w $DIR:"
+            find "$DIR" -type f 2>/dev/null | wc -l
+            echo "Przyklad zawartosci:"
+            find "$DIR" -type f 2>/dev/null | head -10
