@@ -1,0 +1,8 @@
+{
+  "profile": "training",
+  "publish_at": "2026-10-31T08:00:00+01:00",
+  "networks": ["instagram"],
+  "media": ["https://event.avufu.com/og.png"],
+  "caption": "Test publikacji (do usuniecia).",
+  "status": "pending"
+}
