@@ -3,6 +3,9 @@ name: Deploy /social to Hostinger
 # Wgrywa grafiki z folderu `social/` tego repo do katalogu
 # /home/u112202089/domains/event.avufu.com/public_html/social na Hostingerze.
 # Odpala sie przy zmianach w `social/**` (oraz recznie) — nic innego na stronie nie rusza.
+#
+# Klucz SSH trzymamy w sekrecie SFTP_KEY_B64 (klucz prywatny OpenSSH zakodowany
+# base64 w JEDNEJ linii — odporne na psucie przy wklejaniu). Workflow sam go dekoduje.
 
 on:
   push:
@@ -11,6 +14,9 @@ on:
       - 'social/**'
   workflow_dispatch: {}
 
+env:
+  REMOTE_DIR: /home/u112202089/domains/event.avufu.com/public_html
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,34 +24,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Upload social assets via SCP (SSH)
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SFTP_HOST }}
-          port: ${{ secrets.SFTP_PORT }}
-          username: ${{ secrets.SFTP_USER }}
-          key: ${{ secrets.SFTP_KEY }}
-          passphrase: ${{ secrets.SFTP_KEY_PASSPHRASE }}
-          # Zrodlo: CALY katalog `social` (bez glob `**` — jednoznaczne tarowanie
-          # z zachowaniem struktury; `social/**` wczesniej nie wgrywal plikow).
-          source: "social"
-          # Cel: docroot domeny. tar zachowuje prefiks `social/`, wiec pliki
-          # ladauja w .../public_html/social/...
-          target: "/home/u112202089/domains/event.avufu.com/public_html/"
-          overwrite: true
-          rm: false
+      - name: Przygotuj klucz SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SFTP_KEY_B64 }}" | base64 -d > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "Naglowek klucza (powinno byc OPENSSH PRIVATE KEY):"
+          head -1 ~/.ssh/deploy_key
+          ssh-keyscan -p "${{ secrets.SFTP_PORT }}" "${{ secrets.SFTP_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      - name: Wgraj grafiki (scp)
+        run: |
+          scp -i ~/.ssh/deploy_key -P "${{ secrets.SFTP_PORT }}" \
+              -o StrictHostKeyChecking=no -r \
+              social "${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}:${REMOTE_DIR}/"
 
       - name: Weryfikacja — co jest na serwerze
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.SFTP_HOST }}
-          port: ${{ secrets.SFTP_PORT }}
-          username: ${{ secrets.SFTP_USER }}
-          key: ${{ secrets.SFTP_KEY }}
-          passphrase: ${{ secrets.SFTP_KEY_PASSPHRASE }}
-          script: |
-            DIR=/home/u112202089/domains/event.avufu.com/public_html/social
-            echo "Plikow w $DIR:"
-            find "$DIR" -type f 2>/dev/null | wc -l
-            echo "Przyklad zawartosci:"
-            find "$DIR" -type f 2>/dev/null | head -10
+        run: |
+          ssh -i ~/.ssh/deploy_key -p "${{ secrets.SFTP_PORT }}" \
+              -o StrictHostKeyChecking=no \
+              "${{ secrets.SFTP_USER }}@${{ secrets.SFTP_HOST }}" \
+              "echo 'Plikow w social:'; find ${REMOTE_DIR}/social -type f | wc -l; find ${REMOTE_DIR}/social -type f | head -10"
