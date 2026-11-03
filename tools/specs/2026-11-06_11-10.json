@@ -2,7 +2,7 @@
  "posts": [
   {
    "id": "13_wigilia-z-nami",
-   "theme": "violet",
+   "theme": "dark",
    "slides": [
     {
      "kicker": "Firmowa Wigilia 2026",
@@ -39,7 +39,7 @@
   },
   {
    "id": "14_checklista-6-tygodni",
-   "theme": "dark",
+   "theme": "violet",
    "slides": [
     {
      "kicker": "Do zapisania",
@@ -83,7 +83,7 @@
   },
   {
    "id": "15_mit-biuro-gorzej",
-   "theme": "violet",
+   "theme": "dark",
    "slides": [
     {
      "kicker": "Mit czy fakt",
@@ -113,7 +113,7 @@
   },
   {
    "id": "16_swiateczne-biuro",
-   "theme": "dark",
+   "theme": "violet",
    "slides": [
     {
      "kicker": "Inspiracje",
@@ -135,7 +135,7 @@
   },
   {
    "id": "17_swiatlo-101",
-   "theme": "violet",
+   "theme": "dark",
    "slides": [
     {
      "kicker": "Za kulisami",

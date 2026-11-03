@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {"id": "18_usa-u-siebie", "theme": "violet", "slides": [
+      {"kicker": "Firmowe święta na świecie", "title": "Co trzecia firma w USA świętuje *u siebie*", "size": 84,
+       "text": "Challenger, Gray & Christmas od 2004 r. pyta amerykańskie firmy o świąteczne imprezy. Oto, co pokazała ostatnia ankieta."},
+      {"kicker": "Dane z USA", "stats": [
+        ["64,4%", "firm planowało imprezę świąteczną na żywo"],
+        ["32%", "organizuje ją na terenie firmy"],
+        ["58%", "świętuje w godzinach pracy"],
+        ["57%", "serwuje alkohol"]],
+       "source": "Źródło: Challenger, Gray & Christmas, ankieta online, listopad 2023, N=202 firmy z USA, publikacja: 19.12.2023."},
+      {"kicker": "A w Polsce?", "num": "19%", "title": "badanych pracowników mówi, że Wigilia odbywa się *w siedzibie firmy*", "size": 60,
+       "note": "To inne badanie i inna metoda: w USA pytano firmy, w Polsce pracowników. Wspólny wniosek jest jednak prosty – świętowanie u siebie to częsty wybór, nie wyjątek.",
+       "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, listopad 2024, N=730 użytkowników serwisu, publikacja: 5.12.2024."}
+    ]},
+    {"id": "19_bonenkai", "theme": "dark", "slides": [
+      {"kicker": "Firmowe święta na świecie · Japonia", "title": "Bōnenkai, czyli spotkanie, by *zapomnieć stary rok*", "size": 80,
+       "text": "Japończycy kończą rok firmowym przyjęciem. Jego nazwa mówi wszystko o tym, po co się spotykają."},
+      {"title": "Skąd się *wzięło*", "size": 76, "rows": [
+        ["Nazwa", "忘年会: „zapomnieć” + „rok” + „spotkanie”. Słownik definiuje je jako przyjęcie na koniec roku, by zapomnieć o jego trudach."],
+        ["Historia", "Korzenie sięgają XV wieku. Po wojnie stało się stałym punktem kalendarza japońskich firm."],
+        ["Dziś", "Organizuje je zwykle pracodawca, w dużych firmach także poszczególne działy."]],
+       "source": "Źródła: The Japan Times, 8.12.2023; Wikipedia, hasło „Bōnenkai” (za: Narodowa Biblioteka Sejmowa Japonii)."},
+      {"kicker": "Bureikō", "title": "Wieczór, w którym *znika hierarchia*", "size": 76,
+       "text": "Bōnenkai to czas bureikō: na kilka godzin można zapomnieć o randze, wieku i relacji szef–pracownik.",
+       "note": "Wniosek: dobre firmowe spotkanie to takie, na którym ludzie rozmawiają ze sobą, a nie ze stanowiskami.",
+       "source": "Źródło: Wikipedia, hasło „Bōnenkai”."}
+    ]},
+    {"id": "20_pikkujoulu", "theme": "violet", "slides": [
+      {"kicker": "Firmowe święta na świecie · Finlandia", "title": "Pikkujoulu, czyli *„mała Gwiazdka”*", "size": 84,
+       "text": "W Finlandii sezon firmowych imprez świątecznych zaczyna się już w listopadzie."},
+      {"title": "Od studentów *do firm*", "size": 76, "rows": [
+        ["XIX wiek", "Korzenie: przedświąteczne obchody Adwentu."],
+        ["1920–1939", "Studenci zamienili je w zabawy."],
+        ["Po 1945", "Zwyczaj rozpowszechnił się w całym społeczeństwie."],
+        ["Dziś", "Własne pikkujoulu organizuje niemal każda firma, instytucja i klub."]],
+       "source": "Źródła: finland.fi, „Show me the way to the next pikkujoulu”, 14.12.2011; Yle News, 24.12.2014."},
+      {"title": "Co musi się *wydarzyć*", "size": 76, "list": [
+        "Glögi – grzaniec z alkoholem albo bez",
+        "Mikołaj z drobnymi, żartobliwymi prezentami",
+        "Wspólne śpiewanie i karaoke",
+        "Przemówienia, skecze, krótkie występy"],
+       "note": "Wniosek: zespół zapamiętuje nie menu, tylko program i wspólne chwile.",
+       "source": "Źródło: finland.fi, 14.12.2011."}
+    ]}
+  ]
+}
