@@ -50,5 +50,9 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
 - `media` muszą być PUBLICZNYMI linkami — Meta sama pobiera grafikę z URL-a.
   Grafiki wrzucamy jak dotąd do `social/...`, a deploy stawia je pod
   `event.avufu.com/social/...` (ten sam mechanizm, którego już używasz).
-- Instagram: limit ~25 postów/dobę na konto. Grafiki JPG/PNG.
+- Instagram: limit ~25 postów/dobę na konto. Grafiki JPG/PNG. **IG wymaga grafiki**
+  (publiczny link) — posta bez `media` nie opublikuje.
+- Facebook: publikuje zdjęcie, karuzelę albo **sam tekst** (gdy `media` puste).
+- `networks` domyślnie = `["instagram","facebook"]`. Post leci na daną sieć tylko
+  jeśli w GitHub są jej sekrety; brak sekretów = post czeka w kolejce.
 - Stories z ankietami: tego API nie publikuje — zostają ręcznie z telefonu.
