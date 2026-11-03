@@ -1,0 +1,8 @@
+{
+  "profile": "training",
+  "publish_at": "2026-11-03T12:00:00+01:00",
+  "networks": ["instagram", "facebook"],
+  "media": ["https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/2026-w44/grid/1_jak-pracujemy_01.jpg"],
+  "caption": "Test grafiki z GitHuba (do usuniecia).",
+  "status": "pending"
+}

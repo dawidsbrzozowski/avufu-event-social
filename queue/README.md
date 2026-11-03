@@ -15,7 +15,7 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
 | `profile` | tak | `event` lub `training` — wybiera, których sekretów/kont użyć |
 | `publish_at` | tak | Data i godzina z przesunięciem strefy, ISO 8601. Warszawa zimą = `+01:00`, latem = `+02:00`. Brak pola = publikuj od razu. |
 | `networks` | nie | Lista: `["instagram","facebook"]` (domyślnie oba) |
-| `media` | tak | Lista PUBLICZNYCH linków do grafik (np. `https://event.avufu.com/social/...jpg`). 1 link = pojedynczy post, wiele = karuzela. |
+| `media` | tak | Lista PUBLICZNYCH linków do grafik. Grafiki wrzucamy do folderu `social/` tego repo, a link to `https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/....jpg`. 1 link = pojedynczy post, wiele = karuzela. |
 | `caption` | tak | Treść posta (hashtagi w treści). |
 | `status` | — | Ustawia automat: `pending` → `published` / `error`. Nowy post zostaw bez tego pola lub `"pending"`. |
 
@@ -25,7 +25,7 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
   "profile": "event",
   "publish_at": "2026-11-03T07:30:00+01:00",
   "networks": ["instagram", "facebook"],
-  "media": ["https://event.avufu.com/social/2026-w45/post1.jpg"],
+  "media": ["https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/2026-w45/post1.jpg"],
   "caption": "Treść posta...\n\n#eventfirmowy #wroclaw #avufuEVENT",
   "status": "pending"
 }
@@ -38,8 +38,8 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
   "publish_at": "2026-11-04T10:00:00+01:00",
   "networks": ["instagram", "facebook"],
   "media": [
-    "https://event.avufu.com/social/training/2026-w45/slajd1.jpg",
-    "https://event.avufu.com/social/training/2026-w45/slajd2.jpg"
+    "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/training/2026-w45/slajd1.jpg",
+    "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/training/2026-w45/slajd2.jpg"
   ],
   "caption": "Treść...\n\n#szkolenia #HR #avufuTRAINING",
   "status": "pending"
@@ -48,8 +48,10 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
 
 ## Ważne
 - `media` muszą być PUBLICZNYMI linkami — Meta sama pobiera grafikę z URL-a.
-  Grafiki wrzucamy jak dotąd do `social/...`, a deploy stawia je pod
-  `event.avufu.com/social/...` (ten sam mechanizm, którego już używasz).
+  Grafiki wrzucamy do folderu `social/` tego repo i commitujemy. GitHub serwuje
+  je od razu jako publiczne linki `https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/...`
+  (repo jest publiczne, zero deployu na Hostinger, zero SSH). WAŻNE: najpierw
+  zacommituj+zapushuj grafikę, DOPIERO potem post z linkiem do niej.
 - Instagram: limit ~25 postów/dobę na konto. Grafiki JPG/PNG. **IG wymaga grafiki**
   (publiczny link) — posta bez `media` nie opublikuje.
 - Facebook: publikuje zdjęcie, karuzelę albo **sam tekst** (gdy `media` puste).
