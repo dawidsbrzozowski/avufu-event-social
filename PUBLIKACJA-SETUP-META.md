@@ -48,16 +48,23 @@ Najprościej w **Graph API Explorer** (https://developers.facebook.com/tools/exp
 Repo `avufu-event-social` → **Settings → Secrets and variables → Actions → New repository secret**.
 Dodaj (dla każdego profilu osobno):
 
+**WAŻNE — nazwy muszą być DOKŁADNIE takie (tak czyta je `scripts/publish.py` i `publish.yml`).**
+Metoda, która zadziałała, to **System User token** (SUAT, nie wygasa), nie „Instagram
+Tester" z KROKU 2 — KROK 1–3 powyżej są historyczne. Realne 4 sekrety na profil:
+
 | Sekret | Wartość |
 |---|---|
-| `EVENT_ACCESS_TOKEN` | token strony FB dla EVENT |
-| `EVENT_IG_USER_ID` | IG_USER_ID dla `event.avufu` |
-| `EVENT_PAGE_ID` | PAGE_ID strony FB EVENT |
-| `TRAINING_ACCESS_TOKEN` | token strony FB dla TRAINING |
-| `TRAINING_IG_USER_ID` | IG_USER_ID konta training |
-| `TRAINING_PAGE_ID` | PAGE_ID strony FB TRAINING |
+| `EVENT_IG_TOKEN` | token System Usera (`instagram_content_publish`) dla `event.avufu` |
+| `EVENT_IG_USER_ID` | IG Business Account id konta `event.avufu` |
+| `EVENT_FB_PAGE_TOKEN` | token STRONY FB „Avufu EVENT" (`pages_manage_posts`) |
+| `EVENT_FB_PAGE_ID` | id strony FB „Avufu EVENT" (`1298920449981786`) |
+| `TRAINING_IG_TOKEN` | token System Usera (`instagram_content_publish`) dla `training.avufu` |
+| `TRAINING_IG_USER_ID` | IG Business Account id `training.avufu` (`17841451374149506`) |
+| `TRAINING_FB_PAGE_TOKEN` | token STRONY FB „Training.avufu" (`pages_manage_posts`) |
+| `TRAINING_FB_PAGE_ID` | id strony FB „Training.avufu" (`1453902861133145`) |
 
-(Sekrety SFTP_* zostają — obsługują wgrywanie grafik, nie ruszamy ich.)
+(Sekrety SFTP_* są już NIEużywane — grafiki hostujemy przez `raw.githubusercontent.com`,
+deploy na Hostinger usunięty. Można je skasować.)
 
 ## KROK 5 — Test ręczny
 1. Agent (lub Ty) wrzuca jeden testowy plik do `queue/` z `publish_at` w przeszłości
