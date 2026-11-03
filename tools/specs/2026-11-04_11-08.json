@@ -1,0 +1,166 @@
+{
+ "posts": [
+  {
+   "id": "13_wigilia-z-nami",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Firmowa Wigilia 2026",
+     "title": "Co zyskujecie, robiąc Wigilię *z nami*?",
+     "text": "Cztery konkrety zamiast obietnic."
+    },
+    {
+     "num": "01",
+     "title": "Biuro zamienione w salę",
+     "text": "Światło, nagłośnienie i scenografia w Waszej przestrzeni – bez wynajmu sali i dojazdu."
+    },
+    {
+     "num": "02",
+     "title": "Jeden opiekun",
+     "text": "Jedna osoba od pierwszej rozmowy do sprzątania po wydarzeniu. Nie koordynujecie kilku wykonawców."
+    },
+    {
+     "num": "03",
+     "title": "Jasna cena",
+     "text": "Oferta w trzech wariantach z opisanym zakresem. Orientacyjny koszt sprawdzicie wcześniej w konfiguratorze."
+    },
+    {
+     "num": "04",
+     "title": "Spokój w dniu wydarzenia",
+     "text": "Przed wyceną sprawdzamy zasilanie, wymiary i czas montażu. Sprzęt zapasowy planujemy z góry."
+    },
+    {
+     "title": "Grudzień ma *17 dni roboczych* do Wigilii",
+     "size": 72,
+     "text": "Od 2025 r. 24 grudnia jest dniem wolnym od pracy, więc firmowe spotkania mieszczą się między 1 a 23 grudnia.",
+     "cta": "Konfigurator – link w bio"
+    }
+   ]
+  },
+  {
+   "id": "14_checklista-6-tygodni",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Do zapisania",
+     "title": "Wigilia firmowa *w 6 tygodni*",
+     "text": "Checklista dla office managerów i HR – od dziś do połowy grudnia."
+    },
+    {
+     "kicker": "Krok 1",
+     "title": "Tygodnie *6–5*",
+     "size": 76,
+     "list": [
+      "Ustalcie budżet i liczbę gości",
+      "Wybierzcie datę i dwa terminy zapasowe",
+      "Zdecydujcie: biuro czy wynajęta sala",
+      "Poproście wykonawców o wycenę"
+     ]
+    },
+    {
+     "kicker": "Krok 2",
+     "title": "Tygodnie *4–3*",
+     "size": 76,
+     "list": [
+      "Potwierdźcie wykonawcę i podpiszcie umowę",
+      "Wyślijcie zaproszenia z terminem potwierdzenia",
+      "Zbierzcie informacje o diecie i alergiach",
+      "Ustalcie plan wieczoru i kto przemawia"
+     ]
+    },
+    {
+     "kicker": "Krok 3",
+     "title": "Tygodnie *2–1*",
+     "size": 76,
+     "list": [
+      "Potwierdźcie wykonawcy liczbę gości",
+      "Sprawdźcie dostęp do biura po godzinach i miejsce na rozładunek",
+      "Przypomnijcie zespołowi o wydarzeniu",
+      "Wyznaczcie osobę kontaktową na dzień wydarzenia"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "15_mit-biuro-gorzej",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Mit czy fakt",
+     "title": "„Event w biurze wygląda *gorzej niż w sali*”",
+     "size": 80,
+     "text": "Mit – o ile biuro dostanie oprawę."
+    },
+    {
+     "title": "Co robi *różnicę*",
+     "size": 76,
+     "rows": [
+      [
+       "Światło",
+       "Ciepłe, przygaszone światło i podświetlone ściany sprawiają, że biuro przestaje wyglądać jak biuro."
+      ],
+      [
+       "Dźwięk",
+       "Dzięki nagłośnieniu z mikrofonem życzenia i przemówienia słyszą wszyscy, także w open space."
+      ],
+      [
+       "Układ",
+       "Przestawione stoły i wyznaczona strefa wieczoru oddzielają spotkanie od miejsca pracy."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "16_swiateczne-biuro",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Inspiracje",
+     "title": "Świąteczne biuro *bez remontu*",
+     "text": "Pięć sposobów, które działają także w open space."
+    },
+    {
+     "title": "Pięć *prostych zmian*",
+     "size": 72,
+     "olist": [
+      "Ciepłe światło zamiast jarzeniówek: lampy stojące, lampki, podświetlenie ścian",
+      "Jedna duża choinka zamiast drobnych ozdób na biurkach",
+      "Strefa zdjęć z tłem i dobrym światłem",
+      "Muzyka w tle od pierwszej minuty",
+      "Stoły zsunięte w jedną wspólną przestrzeń"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "17_swiatlo-101",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Za kulisami",
+     "title": "Dlaczego *światło* zmienia nastrój?",
+     "text": "Biuro oświetla się tak, żeby dobrze się w nim pracowało. Wieczór potrzebuje innego światła."
+    },
+    {
+     "title": "Trzy rzeczy, *które zmieniamy*",
+     "size": 72,
+     "rows": [
+      [
+       "Barwa",
+       "Biurowe światło ma zwykle barwę neutralną lub chłodną (ok. 4000 K i więcej). Ciepła barwa, ok. 2700–3000 K, kojarzy się z wieczorem i domem."
+      ],
+      [
+       "Natężenie",
+       "Mniej światła z sufitu, więcej punktowego: przy stołach, na ścianach i w strefie zdjęć."
+      ],
+      [
+       "Kolor",
+       "Akcent kolorystyczny na ścianie lub suficie wyznacza miejsce wieczoru."
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}
