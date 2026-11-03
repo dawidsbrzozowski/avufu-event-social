@@ -131,7 +131,9 @@ def main():
     for f in files:
         with open(f, encoding="utf-8") as fh:
             post = json.load(fh)
-        if post.get("status") not in (None, "pending"):
+        # publikowalne: brak statusu / pending / approved. Reszta (draft, hold,
+        # error, published) jest pomijana - pozwala stageowac posta bez publikacji.
+        if post.get("status") not in (None, "pending", "approved"):
             continue
         if not is_due(post):
             print(f"Jeszcze nie czas: {os.path.basename(f)} ({post.get('publish_at')})")

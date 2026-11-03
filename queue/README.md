@@ -17,7 +17,7 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
 | `networks` | nie | Lista: `["instagram","facebook"]` (domyślnie oba) |
 | `media` | tak | Lista PUBLICZNYCH linków do grafik. Grafiki wrzucamy do folderu `social/` tego repo, a link to `https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/....jpg`. 1 link = pojedynczy post, wiele = karuzela. |
 | `caption` | tak | Treść posta (hashtagi w treści). |
-| `status` | — | Ustawia automat: `pending` → `published` / `error`. Nowy post zostaw bez tego pola lub `"pending"`. |
+| `status` | — | Bramka publikacji. Publikowalne: brak pola / `"pending"` / `"approved"`. Pomijane (zostają w repo, nie publikują): `"draft"`, `"hold"`. Ustawia automat po próbie: `"published"` (sukces, plik → `published/`) albo `"error"` (błąd, zostaje tu z polem `error`). Dla postów z akceptacją Dawida użyj `"approved"`. |
 
 ## Przykład (pojedyncze zdjęcie)
 ```json
