@@ -10,7 +10,7 @@ name: Publikuj posty (IG + FB)
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: '*/30 * * * *'   # co 30 min (czas UTC!). ~1440 przebiegow/mc = w darmowym limicie.
+    - cron: '*/15 * * * *'   # co 15 min (czas UTC!). Repo publiczne = minuty Actions bez limitu.
 
 permissions:
   contents: write   # pozwala zapisac przeniesione posty (queue -> published) z powrotem do repo
