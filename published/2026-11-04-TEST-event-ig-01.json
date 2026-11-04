@@ -8,5 +8,9 @@
     "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/2026-w45/swiat/18_usa-u-siebie_01.jpg"
   ],
   "caption": "Test publikacji IG event (do usuniecia).",
-  "status": "approved"
+  "status": "published",
+  "published_at": "2026-11-04T15:52:01.987340+00:00",
+  "results": {
+    "instagram": "18359170465216662"
+  }
 }
