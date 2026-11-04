@@ -32,8 +32,8 @@ jobs:
       - name: Publikuj zalegle posty
         env:
           GRAPH_VERSION: v23.0
-          EVENT_IG_TOKEN:        ${{ secrets.EVENT_IG_TOKEN }}
-          EVENT_IG_USER_ID:      ${{ secrets.EVENT_IG_USER_ID }}
+          EVENT_IG_TOKEN:        ${{ secrets.TRAINING_IG_TOKEN }}   # bot avufu-publisher-bot ma przypisane @event.avufu -> ten sam SUAT publikuje na Event (brak regeneracji, Training bezpieczny)
+          EVENT_IG_USER_ID:      "17841460345842460"                # @event.avufu IG Business Account id (jawne, nie-tajne)
           EVENT_FB_PAGE_TOKEN:   ${{ secrets.EVENT_FB_PAGE_TOKEN }}
           EVENT_FB_PAGE_ID:      ${{ secrets.EVENT_FB_PAGE_ID }}
           TRAINING_IG_TOKEN:     ${{ secrets.TRAINING_IG_TOKEN }}
