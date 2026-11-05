@@ -46,6 +46,20 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
 }
 ```
 
+## Przykład (rolka)
+Jeden link do pliku `.mp4` albo `.mov` w `media`. Instagram publikuje go jako rolkę, a Facebook jako wideo strony. Pole `cover` (link do JPG) jest opcjonalne i dotyczy Instagrama.
+```json
+{
+  "profile": "training",
+  "publish_at": "2026-11-05T12:15:00+01:00",
+  "networks": ["instagram", "facebook"],
+  "media": ["https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/training/2026-w45/rolka.mp4"],
+  "cover": "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/training/2026-w45/rolka-okladka.jpg",
+  "caption": "Treść...\n\n#szkolenia #HR",
+  "status": "approved"
+}
+```
+
 ## Ważne
 - `media` muszą być PUBLICZNYMI linkami — Meta sama pobiera grafikę z URL-a.
   Grafiki wrzucamy do folderu `social/` tego repo i commitujemy. GitHub serwuje

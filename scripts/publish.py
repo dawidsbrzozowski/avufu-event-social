@@ -22,6 +22,9 @@ Sekrety (zmienne srodowiskowe), per profil (EVENT / TRAINING):
   <PROFIL>_FB_PAGE_TOKEN   - token STRONY FB z pages_manage_posts (do publikacji na FB)
   <PROFIL>_FB_PAGE_ID      - ID strony FB
 
+Rolka: jeden link .mp4/.mov w "media". IG publikuje ja jako Reels, a FB jako
+wideo strony. Opcjonalne pole "cover" to link do okladki JPG.
+
 Pole "networks" w poscie wybiera sieci: ["instagram"], ["facebook"] albo oba.
 Post leci na dana siec tylko jesli sa jej sekrety; brak sekretow = post czeka
 w kolejce (nie jest oznaczany jako opublikowany).
@@ -50,6 +53,13 @@ def published_ok(result):
     return bool(result)
 
 
+def is_video(media):
+    """Rolka = dokladnie jeden link do pliku .mp4 albo .mov."""
+    if len(media) != 1:
+        return False
+    return urllib.parse.urlparse(media[0]).path.lower().endswith((".mp4", ".mov"))
+
+
 def api(path, params, method="POST"):
     data = urllib.parse.urlencode(params).encode()
     if method == "POST":
@@ -63,10 +73,31 @@ def api(path, params, method="POST"):
         raise RuntimeError(f"Graph API {e.code}: {e.read().decode()}")
 
 
-def publish_instagram(token, ig_id, media, caption):
+def wait_for_video(token, cid, timeout=300):
+    """IG przetwarza wideo dluzej niz grafike: czekamy na FINISHED."""
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        r = api(cid, {"fields": "status_code,status", "access_token": token}, "GET")
+        code = r.get("status_code")
+        if code == "FINISHED":
+            return
+        if code in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"Instagram odrzucil wideo: {r}")
+        time.sleep(10)
+    raise RuntimeError(f"Instagram nie przetworzyl wideo w {timeout} s")
+
+
+def publish_instagram(token, ig_id, media, caption, cover=None):
     if not ig_id:
         raise RuntimeError("brak IG_USER_ID")
-    if len(media) == 1:
+    if is_video(media):
+        params = {"media_type": "REELS", "video_url": media[0], "caption": caption,
+                  "share_to_feed": "true", "access_token": token}
+        if cover:
+            params["cover_url"] = cover
+        cid = api(f"{ig_id}/media", params)["id"]
+        wait_for_video(token, cid)
+    elif len(media) == 1:
         cid = api(f"{ig_id}/media",
                   {"image_url": media[0], "caption": caption, "access_token": token})["id"]
     else:
@@ -78,7 +109,8 @@ def publish_instagram(token, ig_id, media, caption):
         cid = api(f"{ig_id}/media",
                   {"media_type": "CAROUSEL", "children": ",".join(children),
                    "caption": caption, "access_token": token})["id"]
-    time.sleep(6)  # IG potrzebuje chwili na przetworzenie kontenera
+    if not is_video(media):
+        time.sleep(6)  # IG potrzebuje chwili na przetworzenie kontenera
     mid = api(f"{ig_id}/media_publish", {"creation_id": cid, "access_token": token})["id"]
     try:
         return api(mid, {"fields": "permalink", "access_token": token}, "GET").get("permalink", mid)
@@ -88,12 +120,17 @@ def publish_instagram(token, ig_id, media, caption):
 
 def publish_facebook(token, page_id, media, caption):
     """Publikuje na stronie FB. Zdjecie -> /photos, wiele zdjec -> /feed z
-    attached_media, brak zdjec -> /feed (post tekstowy). Zwraca link lub id."""
+    attached_media, brak zdjec -> /feed (post tekstowy), plik .mp4/.mov ->
+    /videos. Zwraca link lub id."""
     if not page_id:
         raise RuntimeError("brak FB_PAGE_ID")
     if not media:
         pid = api(f"{page_id}/feed", {"message": caption, "access_token": token})["id"]
         return f"https://www.facebook.com/{pid}"
+    if is_video(media):
+        vid = api(f"{page_id}/videos",
+                  {"file_url": media[0], "description": caption, "access_token": token})["id"]
+        return f"https://www.facebook.com/{page_id}/videos/{vid}"
     if len(media) == 1:
         r = api(f"{page_id}/photos",
                 {"url": media[0], "caption": caption, "access_token": token})
@@ -155,7 +192,7 @@ def main():
         try:
             if "instagram" in networks and not published_ok(results.get("instagram")):
                 tok, ig = ig_creds(profile)
-                results["instagram"] = publish_instagram(tok, ig, media, caption)
+                results["instagram"] = publish_instagram(tok, ig, media, caption, post.get("cover"))
             if "facebook" in networks and not published_ok(results.get("facebook")):
                 tok, page = fb_creds(profile)
                 results["facebook"] = publish_facebook(tok, page, media, caption)
