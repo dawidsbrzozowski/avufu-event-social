@@ -25,11 +25,13 @@
           ]
         },
         {
-          "kicker": "Konfigurator",
-          "title": "Ile to kosztuje? *Sprawdźcie sami.*",
-          "size": 84,
-          "text": "Kilka wyborów – goście, poczęstunek, napoje, nagłośnienie, światło, obsługa – i od razu widzicie orientacyjny koszt.",
-          "cta": "Otwórz konfigurator"
+          "kicker": "Ile to kosztuje?",
+          "num": "od 180 zł",
+          "title": "netto za osobę. *Resztę dobierzecie sami.*",
+          "size": 72,
+          "text": "Goście, poczęstunek, napoje i bar, oprawa audio, oświetlenie, obsługa – wybieracie w konfiguratorze, a my przygotowujemy wycenę.",
+          "cta": "Skonfigurujcie swoją Wigilię",
+          "source": "Cena przykładowa: 50 osób, oprawa dźwiękowa i finger food. Ostateczna wycena indywidualna."
         }
       ]
     },
@@ -42,7 +44,7 @@
           "title": "Grudzień ma *17 dni roboczych* do Wigilii",
           "size": 88,
           "text": "Od 2025 r. 24 grudnia jest dniem wolnym od pracy. Zaplanujcie spotkanie z wyprzedzeniem – w Waszym biurze, bez wynajmu sali.",
-          "cta": "Sprawdźcie koszt w konfiguratorze"
+          "cta": "Skonfigurujcie swoją Wigilię"
         }
       ]
     },
@@ -56,7 +58,7 @@
           "title": "badanych pracowników mówi, że firmowa Wigilia odbywa się *w siedzibie firmy*",
           "size": 58,
           "note": "Biuro może wyglądać jak sala bankietowa – światło, dźwięk i scenografia robią różnicę.",
-          "cta": "Sprawdźcie koszt w konfiguratorze",
+          "cta": "Skonfigurujcie swoją Wigilię",
           "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, listopad 2024, N=730 użytkowników serwisu, publikacja: 5.12.2024."
         }
       ]
@@ -73,8 +75,9 @@
           "kicker": "Wrocław i okolice · Poznań i okolice",
           "title": "Szukacie sali na Wigilię? *Już ją macie.*",
           "size": 104,
-          "text": "To Wasze biuro. Przywozimy światło, dźwięk i scenografię. Koszt sprawdzicie w konfiguratorze.",
-          "cta": "Otwórz konfigurator"
+          "text": "To Wasze biuro. Przywozimy światło, dźwięk i scenografię. Od 180 zł netto za osobę.",
+          "cta": "Skonfigurujcie swoją Wigilię",
+          "source": "Cena przykładowa: 50 osób, oprawa dźwiękowa i finger food. Ostateczna wycena indywidualna."
         }
       ]
     },
@@ -88,7 +91,7 @@
           "title": "Grudzień ma *17 dni roboczych* do Wigilii",
           "size": 100,
           "text": "Od 2025 r. 24 grudnia jest dniem wolnym od pracy. Zaplanujcie spotkanie z wyprzedzeniem – w Waszym biurze, bez wynajmu sali.",
-          "cta": "Sprawdźcie koszt w konfiguratorze"
+          "cta": "Skonfigurujcie swoją Wigilię"
         }
       ]
     },
@@ -103,7 +106,7 @@
           "title": "badanych pracowników mówi, że firmowa Wigilia odbywa się *w siedzibie firmy*",
           "size": 66,
           "note": "Biuro może wyglądać jak sala bankietowa – światło, dźwięk i scenografia robią różnicę.",
-          "cta": "Sprawdźcie koszt w konfiguratorze",
+          "cta": "Skonfigurujcie swoją Wigilię",
           "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, listopad 2024, N=730 użytkowników serwisu, publikacja: 5.12.2024."
         }
       ]

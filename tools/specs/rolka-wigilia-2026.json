@@ -52,11 +52,13 @@
       "theme": "dark",
       "slides": [
         {
-          "kicker": "Konfigurator",
-          "title": "Ile to kosztuje? *Sprawdźcie w konfiguratorze.*",
-          "size": 100,
-          "text": "Kilka wyborów i od razu widzicie orientacyjny koszt wieczoru.",
-          "cta": "Link w bio · event.avufu.com"
+          "kicker": "Ile to kosztuje?",
+          "num": "od 180 zł",
+          "title": "netto za osobę. *Resztę dobierzecie w konfiguratorze.*",
+          "size": 80,
+          "text": "Wybieracie opcje, my przygotowujemy wycenę.",
+          "cta": "Link w bio · event.avufu.com",
+          "source": "Cena przykładowa: 50 osób, oprawa dźwiękowa i finger food. Ostateczna wycena indywidualna."
         }
       ]
     }
