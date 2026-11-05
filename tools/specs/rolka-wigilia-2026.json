@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {"id": "R1", "format": "story", "theme": "violet", "slides": [
+      {"photo": "/home/claude/avufu-grafiki/reklama/tlo-sala-2x.jpg", "photo_pos": "82% center", "ai": true,
+       "kicker": "Firmowa Wigilia 2026", "title": "Taki klimat *w Waszym biurze*", "size": 110}]},
+    {"id": "R2", "format": "story", "theme": "violet", "slides": [
+      {"photo": "/home/claude/avufu-grafiki/reklama/tlo-sala-2x.jpg", "photo_pos": "60% center", "ai": true,
+       "kicker": "Wrocław i okolice · Poznań i okolice", "title": "Bez wynajmu sali. *Bez dojazdu.*", "size": 104}]},
+    {"id": "R3", "format": "story", "theme": "violet", "slides": [
+      {"photo": "/home/claude/avufu-grafiki/reklama/tlo-sala-2x.jpg", "photo_pos": "95% center", "ai": true,
+       "kicker": "Co przywozimy", "title": "Światło, dźwięk *i scenografia*", "size": 104,
+       "text": "Jeden opiekun od zapytania do sprzątania."}]},
+    {"id": "R4", "format": "story", "theme": "dark", "slides": [
+      {"kicker": "Konfigurator", "title": "Ile to kosztuje? *Sprawdźcie w konfiguratorze.*", "size": 100,
+       "text": "Kilka wyborów i od razu widzicie orientacyjny koszt wieczoru.", "cta": "Link w bio · event.avufu.com"}]}
+  ]
+}

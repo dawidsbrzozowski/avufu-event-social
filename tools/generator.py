@@ -1,7 +1,7 @@
 """Generator grafik Avufu Event (IG/FB), wersja 3 – identyfikacja wizualna Avufu Event.
 Użycie: python3 generator.py tresc.json katalog_wyjsciowy
 Czcionki: Manrope (tekst) + Playfair Display italic (akcent), z paczek @fontsource w ./fonts.
-Pola slajdu: kicker, num, title (*akcent kursywą*), text, list, olist (+start), rows [[etykieta, tekst]],
+Pola slajdu: photo (ścieżka do zdjęcia tła), photo_pos, ai (oznaczenie „wizualizacja AI”), kicker, num, title (*akcent kursywą*), text, list, olist (+start), rows [[etykieta, tekst]],
 stats [[liczba, opis]], note, cta, source (przypis), size (rozmiar tytułu).
 Pola posta: id, theme ("dark" | "violet"), format ("story" = 1080x1920, domyślnie 1080x1350).
 """
@@ -105,9 +105,23 @@ def slide_html(s, w, h, page, total, theme, fonts):
     title = s.get('title', '')
     h1 = s.get('size', 96 if len(title) < 30 else 84 if len(title) < 50 else 72)
     css = CSS % dict(THEMES[theme], w=w, h=h, h1=h1)
+    photo, main_style = '', ''
+    # stories/rolki: strefy bezpieczne Instagrama (góra ok. 250 px, dół ok. 340 px)
+    wrap_style = ' style="padding:250px 82px 340px"' if h == 1920 else ''
+    ai_top = 260 if h == 1920 else 44
+    if s.get('photo'):
+        pos = s.get('photo_pos', 'center')
+        photo = (f'<div style="position:absolute;inset:0;background:url(file://{s["photo"]}) {pos}/cover no-repeat"></div>'
+                 '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,17,41,.70) 0%,rgba(26,17,41,.10) 30%,'
+                 'rgba(26,17,41,.25) 50%,rgba(26,17,41,.92) 78%,#1a1129 100%)"></div>')
+        if s.get('ai'):
+            photo += (f'<div style="position:absolute;right:40px;top:{ai_top}px;font-size:20px;font-weight:600;letter-spacing:.12em;'
+                      'text-transform:uppercase;color:#e9e4f2;background:rgba(26,17,41,.65);padding:8px 14px;border-radius:8px;'
+                      'border:1px solid rgba(198,168,247,.35)">wizualizacja AI</div>')
+        main_style = ' style="justify-content:flex-end"'
     return f'''<!doctype html><html lang="pl"><head><meta charset="utf-8"><style>{fonts}{css}</style></head>
-<body><div class="bg"></div><div class="wrap">{LOGO}
-<div class="main">{b}</div>{src}
+<body><div class="bg"></div>{photo}<div class="wrap"{wrap_style}>{LOGO}
+<div class="main"{main_style}>{b}</div>{src}
 <div class="foot"><div>{tags}<div class="url">event.avufu.com</div></div>{pg}</div></div></body></html>'''
 
 def render(spec_path, out_dir):
