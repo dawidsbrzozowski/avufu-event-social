@@ -1,45 +1,112 @@
 {
   "posts": [
-    {"id": "A_klimat_4x5", "theme": "violet", "slides": [
-      {"photo": "/home/claude/avufu-grafiki/reklama/tlo-sala-2x.jpg", "photo_pos": "80% center", "ai": true,
-       "kicker": "Wrocław i okolice · Poznań i okolice", "title": "Taki klimat *w Waszym biurze*", "size": 92,
-       "text": "Firmowa Wigilia bez wynajmu sali i dojazdu."},
-      {"kicker": "Firmowa Wigilia w biurze", "title": "Co *przywozimy*", "size": 88, "list": [
-        "Światło, które zmienia biuro w salę",
-        "Nagłośnienie z mikrofonem na życzenia",
-        "Scenografię i świąteczne dekoracje",
-        "Jednego opiekuna od zapytania do sprzątania"]},
-      {"kicker": "Konfigurator", "title": "Ile to kosztuje? *Sprawdźcie sami.*", "size": 84,
-       "text": "Kilka wyborów – goście, poczęstunek, napoje, nagłośnienie, światło, obsługa – i od razu widzicie orientacyjny koszt.",
-       "cta": "Otwórz konfigurator"}
-    ]},
-    {"id": "B_kalendarz_4x5", "theme": "dark", "slides": [
-      {"kicker": "Firmowa Wigilia 2026", "title": "Grudzień ma *17 dni roboczych* do Wigilii", "size": 88,
-       "text": "Od 2025 r. 24 grudnia jest dniem wolnym od pracy. Zaplanujcie spotkanie z wyprzedzeniem – w Waszym biurze, bez wynajmu sali.",
-       "cta": "Sprawdźcie koszt w konfiguratorze"}
-    ]},
-    {"id": "C_dane_4x5", "theme": "violet", "slides": [
-      {"kicker": "Dane z rynku pracy", "num": "19%", "title": "badanych pracowników mówi, że firmowa Wigilia odbywa się *w siedzibie firmy*", "size": 58,
-       "note": "Biuro może wyglądać jak sala bankietowa – światło, dźwięk i scenografia robią różnicę.",
-       "cta": "Sprawdźcie koszt w konfiguratorze",
-       "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, listopad 2024, N=730 użytkowników serwisu, publikacja: 5.12.2024."}
-    ]},
-    {"id": "A_klimat_9x16", "format": "story", "theme": "violet", "slides": [
-      {"photo": "/home/claude/avufu-grafiki/reklama/tlo-sala-2x.jpg", "photo_pos": "82% center", "ai": true,
-       "kicker": "Wrocław i okolice · Poznań i okolice", "title": "Taki klimat *w Waszym biurze*", "size": 104,
-       "text": "Firmowa Wigilia bez wynajmu sali i dojazdu. Koszt sprawdzicie w konfiguratorze.",
-       "cta": "Otwórz konfigurator"}
-    ]},
-    {"id": "B_kalendarz_9x16", "format": "story", "theme": "dark", "slides": [
-      {"kicker": "Firmowa Wigilia 2026", "title": "Grudzień ma *17 dni roboczych* do Wigilii", "size": 100,
-       "text": "Od 2025 r. 24 grudnia jest dniem wolnym od pracy. Zaplanujcie spotkanie z wyprzedzeniem – w Waszym biurze, bez wynajmu sali.",
-       "cta": "Sprawdźcie koszt w konfiguratorze"}
-    ]},
-    {"id": "C_dane_9x16", "format": "story", "theme": "violet", "slides": [
-      {"kicker": "Dane z rynku pracy", "num": "19%", "title": "badanych pracowników mówi, że firmowa Wigilia odbywa się *w siedzibie firmy*", "size": 66,
-       "note": "Biuro może wyglądać jak sala bankietowa – światło, dźwięk i scenografia robią różnicę.",
-       "cta": "Sprawdźcie koszt w konfiguratorze",
-       "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, listopad 2024, N=730 użytkowników serwisu, publikacja: 5.12.2024."}
-    ]}
+    {
+      "id": "A_klimat_4x5",
+      "theme": "violet",
+      "slides": [
+        {
+          "photo": "/home/claude/avufu-grafiki/reklama/tlo-sala-2x.jpg",
+          "photo_pos": "80% center",
+          "ai": true,
+          "kicker": "Wrocław i okolice · Poznań i okolice",
+          "title": "Szukacie sali na Wigilię? *Już ją macie.*",
+          "size": 92,
+          "text": "To Wasze biuro. Przywozimy światło, dźwięk i scenografię."
+        },
+        {
+          "kicker": "Firmowa Wigilia w biurze",
+          "title": "Co *przywozimy*",
+          "size": 88,
+          "list": [
+            "Światło, które zmienia biuro w salę",
+            "Nagłośnienie z mikrofonem na życzenia",
+            "Scenografię i świąteczne dekoracje",
+            "Jednego opiekuna od zapytania do sprzątania"
+          ]
+        },
+        {
+          "kicker": "Konfigurator",
+          "title": "Ile to kosztuje? *Sprawdźcie sami.*",
+          "size": 84,
+          "text": "Kilka wyborów – goście, poczęstunek, napoje, nagłośnienie, światło, obsługa – i od razu widzicie orientacyjny koszt.",
+          "cta": "Otwórz konfigurator"
+        }
+      ]
+    },
+    {
+      "id": "B_kalendarz_4x5",
+      "theme": "dark",
+      "slides": [
+        {
+          "kicker": "Firmowa Wigilia 2026",
+          "title": "Grudzień ma *17 dni roboczych* do Wigilii",
+          "size": 88,
+          "text": "Od 2025 r. 24 grudnia jest dniem wolnym od pracy. Zaplanujcie spotkanie z wyprzedzeniem – w Waszym biurze, bez wynajmu sali.",
+          "cta": "Sprawdźcie koszt w konfiguratorze"
+        }
+      ]
+    },
+    {
+      "id": "C_dane_4x5",
+      "theme": "violet",
+      "slides": [
+        {
+          "kicker": "Dane z rynku pracy",
+          "num": "19%",
+          "title": "badanych pracowników mówi, że firmowa Wigilia odbywa się *w siedzibie firmy*",
+          "size": 58,
+          "note": "Biuro może wyglądać jak sala bankietowa – światło, dźwięk i scenografia robią różnicę.",
+          "cta": "Sprawdźcie koszt w konfiguratorze",
+          "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, listopad 2024, N=730 użytkowników serwisu, publikacja: 5.12.2024."
+        }
+      ]
+    },
+    {
+      "id": "A_klimat_9x16",
+      "format": "story",
+      "theme": "violet",
+      "slides": [
+        {
+          "photo": "/home/claude/avufu-grafiki/reklama/tlo-sala-2x.jpg",
+          "photo_pos": "82% center",
+          "ai": true,
+          "kicker": "Wrocław i okolice · Poznań i okolice",
+          "title": "Szukacie sali na Wigilię? *Już ją macie.*",
+          "size": 104,
+          "text": "To Wasze biuro. Przywozimy światło, dźwięk i scenografię. Koszt sprawdzicie w konfiguratorze.",
+          "cta": "Otwórz konfigurator"
+        }
+      ]
+    },
+    {
+      "id": "B_kalendarz_9x16",
+      "format": "story",
+      "theme": "dark",
+      "slides": [
+        {
+          "kicker": "Firmowa Wigilia 2026",
+          "title": "Grudzień ma *17 dni roboczych* do Wigilii",
+          "size": 100,
+          "text": "Od 2025 r. 24 grudnia jest dniem wolnym od pracy. Zaplanujcie spotkanie z wyprzedzeniem – w Waszym biurze, bez wynajmu sali.",
+          "cta": "Sprawdźcie koszt w konfiguratorze"
+        }
+      ]
+    },
+    {
+      "id": "C_dane_9x16",
+      "format": "story",
+      "theme": "violet",
+      "slides": [
+        {
+          "kicker": "Dane z rynku pracy",
+          "num": "19%",
+          "title": "badanych pracowników mówi, że firmowa Wigilia odbywa się *w siedzibie firmy*",
+          "size": 66,
+          "note": "Biuro może wyglądać jak sala bankietowa – światło, dźwięk i scenografia robią różnicę.",
+          "cta": "Sprawdźcie koszt w konfiguratorze",
+          "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, listopad 2024, N=730 użytkowników serwisu, publikacja: 5.12.2024."
+        }
+      ]
+    }
   ]
 }

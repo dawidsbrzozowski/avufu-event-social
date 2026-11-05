@@ -113,12 +113,12 @@ def slide_html(s, w, h, page, total, theme, fonts):
         pos = s.get('photo_pos', 'center')
         photo = (f'<div style="position:absolute;inset:0;background:url(file://{s["photo"]}) {pos}/cover no-repeat"></div>'
                  '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,17,41,.70) 0%,rgba(26,17,41,.10) 30%,'
-                 'rgba(26,17,41,.25) 50%,rgba(26,17,41,.92) 78%,#1a1129 100%)"></div>')
+                 'rgba(26,17,41,.30) 42%,rgba(26,17,41,.90) 66%,#1a1129 92%)"></div>')
         if s.get('ai'):
             photo += (f'<div style="position:absolute;right:40px;top:{ai_top}px;font-size:20px;font-weight:600;letter-spacing:.12em;'
                       'text-transform:uppercase;color:#e9e4f2;background:rgba(26,17,41,.65);padding:8px 14px;border-radius:8px;'
                       'border:1px solid rgba(198,168,247,.35)">wizualizacja AI</div>')
-        main_style = ' style="justify-content:flex-end"'
+        main_style = ' style="justify-content:flex-end;padding-bottom:%dpx"' % (150 if h == 1920 else 95)
     return f'''<!doctype html><html lang="pl"><head><meta charset="utf-8"><style>{fonts}{css}</style></head>
 <body><div class="bg"></div>{photo}<div class="wrap"{wrap_style}>{LOGO}
 <div class="main"{main_style}>{b}</div>{src}
