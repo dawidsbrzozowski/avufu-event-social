@@ -65,7 +65,7 @@ def api(path, params, method="POST"):
     if method == "POST":
         req = urllib.request.Request(f"{GRAPH}/{path}", data=data, method="POST")
     else:
-        req = urllib.request.Request(f"{GRAPH}/{path}?" + data, method="GET")
+        req = urllib.request.Request(f"{GRAPH}/{path}?" + data.decode(), method="GET")
     try:
         with urllib.request.urlopen(req, timeout=90) as r:
             return json.loads(r.read().decode())
