@@ -148,7 +148,7 @@
           "rows": [
             [
               "Barwa",
-              "Biurowe światło ma zwykle barwę neutralną lub chłodną (ok. 4000 K i więcej). Ciepła barwa, ok. 2700–3000 K, kojarzy się z wieczorem i domem."
+              "Do pracy w biurze zaleca się chłodniejsze światło, zbliżone do dziennego. Ciepła barwa, poniżej 3300 K, to światło wieczoru."
             ],
             [
               "Natężenie",
@@ -158,7 +158,8 @@
               "Kolor",
               "Akcent kolorystyczny na ścianie lub suficie wyznacza miejsce wieczoru."
             ]
-          ]
+          ],
+          "source": "Źródło: klasy barwy światła (ciepła poniżej 3300 K, pośrednia 3300–5300 K, zimna powyżej 5300 K) – Prawo.pl, R. Majer, „Jaką barwę powinno mieć oświetlenie na stanowisku biurowym?”, 2016."
         }
       ]
     }
