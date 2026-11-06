@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {"id": "18_komentarz-wigilia", "theme": "violet", "slides": [
+      {"kicker": "Firmowa Wigilia 2026", "title": "Wigilia w Waszym biurze? *Napiszcie „WIGILIA”*", "size": 92,
+       "text": "w komentarzu pod tym postem, a w wiadomości prywatnej wyślemy Wam szczegóły."},
+      {"kicker": "Co dostaniecie w wiadomości", "title": "Wszystko *do decyzji*", "size": 88, "list": [
+        "Link do konfiguratora Wigilii",
+        "Przykładową cenę: od 180 zł netto za osobę",
+        "Trzy pytania, po których przygotujemy wycenę",
+        "Kontakt do opiekuna, który odpowie na pytania"],
+       "source": "Cena przykładowa: 50 osób, oprawa dźwiękowa i finger food. Ostateczna wycena indywidualna."},
+      {"kicker": "Jak to działa", "title": "Cztery kroki *do wyceny*", "size": 84, "olist": [
+        "Piszecie „WIGILIA” w komentarzu",
+        "Odpisujemy w wiadomości prywatnej",
+        "Wybieracie opcje w konfiguratorze",
+        "Przygotowujemy wycenę dla Waszego biura"],
+       "cta": "Napiszcie „WIGILIA” w komentarzu"}
+    ]}
+  ]
+}
