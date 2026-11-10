@@ -1,0 +1,270 @@
+{
+ "posts": [
+  {
+   "id": "21_niemcy-weihnachtsfeier",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Firmowe święta na świecie · Niemcy",
+     "num": "110 €",
+     "title": "na pracownika – tyle może kosztować firmowa Wigilia, *zanim pojawi się podatek*",
+     "size": 62,
+     "text": "Weihnachtsfeier, czyli firmowa impreza świąteczna, ma w niemieckim prawie podatkowym własną regułę."
+    },
+    {
+     "title": "Reguła *110 euro*",
+     "size": 76,
+     "rows": [
+      [
+       "Kwota",
+       "110 euro na uczestniczącego pracownika za jedną imprezę."
+      ],
+      [
+       "Limit",
+       "Najwyżej 2 imprezy firmowe w roku."
+      ],
+      [
+       "VAT",
+       "Do kwoty wlicza się wszystkie koszty imprezy razem z VAT."
+      ],
+      [
+       "Kto",
+       "Impreza musi być otwarta dla wszystkich pracowników firmy lub jej części."
+      ],
+      [
+       "Powyżej",
+       "Podatek płaci się tylko od nadwyżki. Pracodawca może ją zwykle rozliczyć ryczałtem 25%."
+      ]
+     ],
+     "source": "Źródła: § 19 ust. 1 pkt 1a EStG; DATEV, „Weihnachtsfeier und Geschenke: Diese 5 Steuerregeln sollten Arbeitgeber kennen”, dostęp: 10.11.2026."
+    },
+    {
+     "kicker": "Co to znaczy dla Waszej firmy",
+     "title": "Liczcie Wigilię *na osobę*",
+     "size": 88,
+     "text": "Niemiecki przepis mierzy imprezę kosztem na pracownika. To dobra miara także dla Was: budżet na gościa pozwala uczciwie porównać salę, restaurację i spotkanie we własnym biurze.",
+     "note": "W Polsce zasady są inne – skonsultujcie z księgową."
+    }
+   ]
+  },
+  {
+   "id": "22_wb-annual-party",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Firmowe święta na świecie · Wielka Brytania",
+     "num": "150 £",
+     "title": "na osobę. Przekroczycie próg – *podatek od całości*",
+     "size": 72,
+     "text": "Brytyjski urząd skarbowy ma osobną regułę dla corocznych imprez firmowych, takich jak przyjęcie świąteczne."
+    },
+    {
+     "title": "Reguła *150 funtów*",
+     "size": 76,
+     "rows": [
+      [
+       "Próg",
+       "150 funtów na osobę – łącznie dla wszystkich corocznych imprez firmowych."
+      ],
+      [
+       "VAT",
+       "Koszt liczy się razem z VAT."
+      ],
+      [
+       "Kto",
+       "Impreza musi być dostępna dla wszystkich pracowników albo dla wszystkich w danej lokalizacji."
+      ],
+      [
+       "Goście",
+       "Koszt dzieli się przez wszystkich uczestników, także spoza firmy."
+      ],
+      [
+       "Powyżej",
+       "Pracownik płaci podatek od całego kosztu na osobę, nie od nadwyżki."
+      ]
+     ],
+     "source": "Źródło: HMRC, Employment Income Manual, EIM21690 „Particular benefits: annual parties and other social functions”, aktualizacja: 3.11.2026."
+    },
+    {
+     "kicker": "Niemcy i Wielka Brytania",
+     "title": "Podobny próg, *inne skutki*",
+     "size": 84,
+     "list": [
+      "Niemcy: 110 euro, powyżej podatek tylko od nadwyżki",
+      "Wielka Brytania: 150 funtów, powyżej podatek od całego kosztu"
+     ],
+     "note": "Wniosek dla Waszej firmy: ustalcie budżet na osobę, zanim wybierzecie salę, restaurację albo biuro. W Polsce zasady są inne – skonsultujcie z księgową.",
+     "source": "Źródła: HMRC EIM21690 (aktualizacja: 3.11.2026); § 19 ust. 1 pkt 1a EStG; DATEV (dostęp: 10.11.2026)."
+    }
+   ]
+  },
+  {
+   "id": "23_biuro-w-sale",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Avufu Event · od kuchni",
+     "title": "Nie szukamy sali. *Robimy ją* w Waszym biurze.",
+     "size": 88,
+     "text": "Biuro, magazyn albo showroom – na jeden wieczór zmieniamy je w miejsce firmowego spotkania."
+    },
+    {
+     "kicker": "Cztery warstwy",
+     "title": "Co zmienia *biuro w salę*",
+     "size": 80,
+     "olist": [
+      "Światło – ciepła barwa, mniej lamp sufitowych, więcej punktowych",
+      "Oprawa audio – muzyka w tle i mikrofon na życzenia",
+      "Scenografia – dekoracje, które wyznaczają miejsce wieczoru",
+      "Prowadzenie – ktoś czuwa nad programem, a Wy świętujecie"
+     ]
+    },
+    {
+     "kicker": "Wrocław i okolice · Poznań i okolice",
+     "title": "Jeden opiekun *od zapytania do sprzątania*",
+     "size": 80,
+     "text": "Wy zapraszacie zespół. My przywozimy światło, oprawę audio i scenografię, a po wszystkim sprzątamy.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  },
+  {
+   "id": "24_co-zmienia-cene",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Firmowa Wigilia · budżet",
+     "title": "Od czego zależy *cena* firmowej Wigilii?",
+     "size": 88,
+     "text": "Sześć decyzji, z których składa się wycena. Warto je podjąć, zanim poprosicie o ofertę."
+    },
+    {
+     "kicker": "Decyzje 1–3",
+     "title": "Goście *i stół*",
+     "size": 80,
+     "rows": [
+      [
+       "Goście",
+       "Od liczby osób zależy ilość jedzenia, miejsc i obsługi."
+      ],
+      [
+       "Jedzenie",
+       "Forma poczęstunku zmienia koszt na osobę."
+      ],
+      [
+       "Napoje",
+       "Napoje i bar to osobna pozycja w wycenie."
+      ]
+     ]
+    },
+    {
+     "kicker": "Decyzje 4–6",
+     "title": "Oprawa *i ludzie*",
+     "size": 80,
+     "rows": [
+      [
+       "Audio",
+       "Muzyka w tle czy mikrofon na przemówienia – zakres oprawy zmienia cenę."
+      ],
+      [
+       "Światło",
+       "Ile światła trzeba przywieźć, żeby biuro zmieniło charakter."
+      ],
+      [
+       "Obsługa",
+       "Ile osób obsługuje gości."
+      ]
+     ]
+    },
+    {
+     "kicker": "Co to znaczy dla Waszej firmy",
+     "num": "od 180 zł",
+     "title": "netto za osobę – *punkt wyjścia*",
+     "size": 72,
+     "text": "Zacznijcie od liczby gości i formy poczęstunku. Resztę wybierzcie w konfiguratorze, a przygotujemy wycenę.",
+     "cta": "Konfigurator Wigilii – link w bio",
+     "source": "Cena przykładowa: 50 osób, oprawa dźwiękowa i finger food. Ostateczna wycena indywidualna."
+    }
+   ]
+  },
+  {
+   "id": "25_szukacie-sali-A",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Wrocław i okolice · Poznań i okolice",
+     "title": "Szukacie sali na Wigilię? *Już ją macie.*",
+     "size": 96,
+     "text": "To Wasze biuro. Przywozimy światło, dźwięk i scenografię."
+    },
+    {
+     "kicker": "Firmowa Wigilia w biurze",
+     "title": "Co *przywozimy*",
+     "size": 88,
+     "list": [
+      "Światło, które zmienia biuro w salę",
+      "Oprawę audio z mikrofonem na życzenia",
+      "Scenografię i świąteczne dekoracje",
+      "Jednego opiekuna od zapytania do sprzątania"
+     ]
+    },
+    {
+     "kicker": "Ile to kosztuje?",
+     "num": "od 180 zł",
+     "title": "netto za osobę. *Resztę dobierzecie sami.*",
+     "size": 72,
+     "text": "Goście, poczęstunek, napoje i bar, oprawa audio, oświetlenie, obsługa – wybieracie w konfiguratorze, a my przygotowujemy wycenę.",
+     "cta": "Skonfigurujcie swoją Wigilię – link w bio",
+     "source": "Cena przykładowa: 50 osób, oprawa dźwiękowa i finger food. Ostateczna wycena indywidualna."
+    }
+   ]
+  },
+  {
+   "id": "26_dlaczego-nie-przychodza",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Dane z rynku pracy",
+     "num": "66%",
+     "title": "badanych pracowników deklaruje, że *przyjdzie* na firmową Wigilię",
+     "size": 62,
+     "text": "A reszta? Pracuj.pl zapytało też, dlaczego część osób nie przychodzi."
+    },
+    {
+     "kicker": "Najczęstsze powody nieobecności",
+     "title": "Dlaczego *nie przychodzą*",
+     "size": 76,
+     "stats": [
+      [
+       "29%",
+       "wrażenie, że spotkanie jest bardziej z obowiązku niż dla integracji"
+      ],
+      [
+       "24%",
+       "obawa przed niezręczną atmosferą"
+      ],
+      [
+       "21%",
+       "zbyt duża odległość do miejsca wydarzenia"
+      ],
+      [
+       "21%",
+       "nie lubią takich wydarzeń"
+      ]
+     ],
+     "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, badanie „Świąteczne oczekiwania w pracy”, CAWI, listopad 2024, N=730 użytkowników serwisu."
+    },
+    {
+     "kicker": "Co to znaczy dla Waszej firmy",
+     "title": "Trzy z czterech powodów *da się ograniczyć*",
+     "size": 76,
+     "list": [
+      "Odległość – spotkanie w biurze nie wymaga dojazdu",
+      "Poczucie obowiązku – program daje powód, by zostać",
+      "Niezręczna atmosfera – prowadzenie i wspólne punkty wieczoru przełamują lody"
+     ]
+    }
+   ]
+  }
+ ]
+}
