@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {"id": "27_zwyczaje-wersja-biurowa", "theme": "dark", "slides": [
+      {"kicker": "Polska Wigilia · zwyczaje", "title": "Łuska karpia w portfelu. *Wersja biurowa.*", "size": 92,
+       "text": "Trzy wigilijne zwyczaje, które łatwo przenieść do firmy – i to, co oznaczały kiedyś."},
+      {"kicker": "Skąd się wzięły", "title": "Trzy zwyczaje *z polskiego stołu*", "size": 76, "rows": [
+        ["Łuska", "Łuska z wigilijnego karpia w portfelu ma zapewnić dostatek w nowym roku."],
+        ["Sianko", "Kładzie się je pod obrus na pamiątkę stajenki. Kiedyś wróżono ze źdźbeł."],
+        ["Nakrycie", "Dodatkowe miejsce przy stole – dla niespodziewanego gościa, dawniej dla wędrowca."]],
+       "source": "Źródła: RMF FM, rozmowa z D. Majkowską-Szajer (Muzeum Etnograficzne w Krakowie), 2022; dzieje.pl (PAP) – etnografki Muzeum Wsi Kieleckiej i Muzeum Etnograficznego w Rzeszowie; Radio Kraków."},
+      {"kicker": "Wersja biurowa", "title": "Jak to przenieść *do firmy*", "size": 84, "list": [
+        "Łuska do portfela – drobiazg dla każdego na dobry rok",
+        "Sianko – garść pod obrusem na stole z poczęstunkiem",
+        "Dodatkowe nakrycie – dla nowej osoby w zespole albo gościa z innego działu"],
+       "note": "Wniosek: małe, znajome rytuały sprawiają, że biurowe spotkanie staje się Wigilią."}
+    ]},
+    {"id": "28_swieta-przed-wigilia", "theme": "violet", "slides": [
+      {"kicker": "Niedziela · na lekko", "title": "Święta w biurze zaczynają się *przed Wigilią*", "size": 88,
+       "text": "Pięć małych pomysłów na grudzień w pracy. Prawie bez budżetu."},
+      {"kicker": "Pięć pomysłów", "title": "Grudzień *w zespole*", "size": 80, "olist": [
+        "Losowanie prezentów przed Mikołajkami – z umówionym limitem kwoty",
+        "Wspólne ubieranie choinki – każdy przynosi jedną bombkę",
+        "Świąteczny sweter w piątek – kto ma najbrzydszy?",
+        "Wspólna playlista – każdy dodaje jedną piosenkę",
+        "Pierniki – jedna osoba piecze, wszyscy dekorują w przerwie"]},
+      {"kicker": "A na koniec grudnia", "title": "Wigilia *u siebie*", "size": 92,
+       "text": "Grudzień to nie jeden wieczór. Małe rytuały budują nastrój, a Wigilia w Waszym biurze go zamyka.",
+       "cta": "Konfigurator Wigilii – link w bio"}
+    ]},
+    {"id": "26_dlaczego-nie-przychodza-v2", "theme": "violet", "slides": [
+      {"kicker": "Dane z rynku pracy", "num": "66%", "title": "badanych pracowników deklaruje, że *przyjdzie* na firmową Wigilię", "size": 62,
+       "text": "A reszta? Pracuj.pl zapytało też, dlaczego część osób nie przychodzi."},
+      {"kicker": "Powody wskazywane przez badanych", "title": "Dlaczego *nie przychodzą*", "size": 76, "stats": [
+        ["29%", "wrażenie, że spotkanie jest bardziej z obowiązku niż dla integracji"],
+        ["24%", "obawa przed niezręczną atmosferą"],
+        ["21%", "zbyt duża odległość do miejsca wydarzenia"],
+        ["21%", "nie lubią takich wydarzeń"]],
+       "source": "Źródło: Pracuj.pl, „Wolne w Wigilię – od pracodawcy, ustawowo czy wcale?”, badanie „Świąteczne oczekiwania w pracy”, CAWI, listopad 2024, N=730 użytkowników serwisu."},
+      {"kicker": "Co to znaczy dla Waszej firmy", "title": "Trzy z czterech powodów *da się ograniczyć*", "size": 76, "list": [
+        "Odległość – spotkanie w biurze nie wymaga dojazdu",
+        "Poczucie obowiązku – program daje powód, by zostać",
+        "Niezręczna atmosfera – prowadzenie i wspólne punkty wieczoru przełamują lody"]}
+    ]}
+  ]
+}
