@@ -1,0 +1,47 @@
+{
+ "posts": [
+  {
+   "id": "27_zwyczaje-wersja-biurowa-v2",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Polska Wigilia · zwyczaje",
+     "title": "Łuska karpia w portfelu. *Wersja biurowa.*",
+     "size": 92,
+     "text": "Trzy wigilijne zwyczaje, które łatwo przenieść do firmy – i to, co oznaczały kiedyś."
+    },
+    {
+     "kicker": "Skąd się wzięły",
+     "title": "Trzy zwyczaje *z polskiego stołu*",
+     "size": 76,
+     "rows": [
+      [
+       "Łuska",
+       "Łuska z wigilijnego karpia w portfelu ma zapewnić dostatek w nowym roku."
+      ],
+      [
+       "Sianko",
+       "Kładzie się je pod obrus na pamiątkę stajenki. Kiedyś wróżono ze źdźbeł."
+      ],
+      [
+       "Nakrycie",
+       "Dodatkowe miejsce przy stole – dla niespodziewanego gościa, dawniej dla wędrowca."
+      ]
+     ],
+     "source": "Źródła: D. Majkowska-Szajer, Muzeum Etnograficzne w Krakowie (RMF FM, 2022); D. Kozłowski i T. Kurzyk, Muzeum Wsi Kieleckiej (Radio Kielce, PAP); E. Dudek-Młynarska, Muzeum Etnograficzne w Rzeszowie (PAP)."
+    },
+    {
+     "kicker": "Wersja biurowa",
+     "title": "Jak to przenieść *do firmy*",
+     "size": 76,
+     "list": [
+      "Życzenie na dobry rok zamiast łuski: jedno zdanie od szefa do zespołu.",
+      "Jedno wolne miejsce przy stole – dla tych, którzy są tego dnia na zmianie, zdalnie albo wpadną na chwilę."
+     ],
+     "note": "Wigilię w firmie robi stół, nie sala. Stół, światło i oprawę audio przywieziemy do Was.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  }
+ ]
+}
