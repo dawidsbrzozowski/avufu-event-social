@@ -1,0 +1,345 @@
+{
+ "posts": [
+  {
+   "id": "27_zwyczaje-wersja-biurowa-v3",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Polska Wigilia · zwyczaje",
+     "title": "Łuska karpia w portfelu. *Wersja biurowa.*",
+     "size": 92,
+     "text": "Trzy wigilijne zwyczaje, które łatwo przenieść do firmy – i to, co oznaczały kiedyś."
+    },
+    {
+     "kicker": "Skąd się wzięły",
+     "title": "Trzy zwyczaje *z polskiego stołu*",
+     "size": 76,
+     "rows": [
+      [
+       "Łuska",
+       "Łuska z wigilijnego karpia w portfelu ma zapewnić dostatek w nowym roku."
+      ],
+      [
+       "Sianko",
+       "Kładzie się je pod obrus na pamiątkę stajenki. Kiedyś wróżono ze źdźbeł."
+      ],
+      [
+       "Nakrycie",
+       "Dodatkowe miejsce przy stole – dla niespodziewanego gościa, dawniej dla wędrowca."
+      ]
+     ],
+     "source": "Źródła: D. Majkowska-Szajer, Muzeum Etnograficzne w Krakowie (RMF FM, 2022); D. Kozłowski i T. Kurzyk, Muzeum Wsi Kieleckiej (Radio Kielce, PAP); E. Dudek-Młynarska, Muzeum Etnograficzne w Rzeszowie (PAP)."
+    },
+    {
+     "kicker": "Wersja biurowa",
+     "title": "Jak to przenieść *do firmy*",
+     "size": 76,
+     "list": [
+      "Życzenie na dobry rok zamiast łuski: jedno zdanie od szefa do zespołu.",
+      "Jedno wolne miejsce przy stole – dla tych, którzy są tego dnia na zmianie, zdalnie albo wpadną na chwilę."
+     ],
+     "note": "Wigilię w firmie robi stół, nie sala. Poczęstunek, światło i oprawę audio przywieziemy do Was.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  },
+  {
+   "id": "29_po-zmroku",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Wigilia w biurze · światło",
+     "title": "Wigilia po pracy? *Będzie już ciemno.*",
+     "size": 92,
+     "text": "18 grudnia słońce zachodzi w Poznaniu ok. 15:40, a we Wrocławiu ok. 15:46."
+    },
+    {
+     "kicker": "18 grudnia 2026",
+     "title": "Zachód *słońca*",
+     "size": 84,
+     "stats": [
+      [
+       "15:40",
+       "Poznań"
+      ],
+      [
+       "15:46",
+       "Wrocław"
+      ]
+     ],
+     "note": "Biuro, które w dzień rozjaśniają okna, wieczorem ma tylko to światło, które w nim zapalicie.",
+     "source": "Źródło: tabele wschodów i zachodów Słońca dla miast Polski (halloween.friko.net). Godziny zaokrąglone; w kolejnych latach różnią się o mniej niż minutę."
+    },
+    {
+     "kicker": "Co to znaczy dla Waszej firmy",
+     "title": "Obejrzyjcie biuro *po zmroku*",
+     "size": 84,
+     "text": "Zanim ustalicie, gdzie stanie stół, przyjdźcie do biura o 16:30. Zobaczycie, które miejsca są ciemne i gdzie przyda się dodatkowe światło. To, czego brakuje, przywieziemy.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  },
+  {
+   "id": "30_kalendarz-grudnia",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Kalendarz grudnia 2026",
+     "title": "24 grudnia wypada *w czwartek*",
+     "size": 92,
+     "text": "Ostatni dzień pracy przed świętami to środa 23 grudnia."
+    },
+    {
+     "kicker": "Ile zostało",
+     "title": "Grudzień *w liczbach*",
+     "size": 84,
+     "stats": [
+      [
+       "17",
+       "dni roboczych od 1 do 23 grudnia"
+      ],
+      [
+       "3",
+       "piątki: 4, 11 i 18 grudnia"
+      ],
+      [
+       "23.12",
+       "środa – ostatni dzień pracy przed świętami"
+      ]
+     ],
+     "source": "Źródło: kalendarz 2026. Od 2025 r. 24 grudnia jest dniem wolnym od pracy (ustawa o dniach wolnych od pracy)."
+    },
+    {
+     "kicker": "Co to znaczy dla Waszej firmy",
+     "title": "Piątki są *tylko trzy*",
+     "size": 88,
+     "text": "Jeśli Wigilia ma być w piątek po pracy, wybieracie między 4, 11 i 18 grudnia. Ustalcie termin w zespole teraz, póki wszyscy mają wolne kalendarze.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  },
+  {
+   "id": "31_skad-12-potraw",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Polska Wigilia · stół",
+     "title": "Skąd *12 potraw*?",
+     "size": 110,
+     "text": "Liczba ma symbolizować 12 apostołów albo 12 miesięcy. Na dawnej wsi tylu dań zwykle jednak nie było."
+    },
+    {
+     "kicker": "Jak było dawniej",
+     "title": "Stół *bez liczenia*",
+     "size": 80,
+     "rows": [
+      [
+       "Symbol",
+       "12 apostołów albo 12 miesięcy – żeby przez cały rok nie zabrakło jedzenia."
+      ],
+      [
+       "Wieś",
+       "Na dolnośląskiej Wigilii bywało od 5 do 7 potraw."
+      ],
+      [
+       "Dwór",
+       "12 dań dawniej podawano głównie na stołach dworskich."
+      ],
+      [
+       "XIX w.",
+       "Liczba potraw miała być nieparzysta."
+      ]
+     ],
+     "source": "Źródła: A. Szepetiuk-Barańska, Muzeum Etnograficzne we Wrocławiu (PAP); A. Imosa, Muzeum Wsi Kieleckiej w Tokarni (Radio Kielce)."
+    },
+    {
+     "kicker": "Co to znaczy dla Waszej firmy",
+     "title": "Liczy się stół, *nie liczba dań*",
+     "size": 74,
+     "text": "Na firmowej Wigilii nie musicie liczyć potraw. Wybierzcie poczęstunek, który pasuje do Waszego biura i długości spotkania.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  },
+  {
+   "id": "32_konfigurator",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Wrocław i okolice · Poznań i okolice",
+     "title": "Jeden ekran. Sześć wyborów. *Jedna wycena.*",
+     "size": 88,
+     "text": "Tak działa nasz konfigurator firmowej Wigilii."
+    },
+    {
+     "kicker": "Co wybieracie",
+     "title": "Sześć *decyzji*",
+     "size": 84,
+     "olist": [
+      "Liczba gości",
+      "Forma poczęstunku",
+      "Napoje i bar",
+      "Oprawa audio",
+      "Oświetlenie",
+      "Obsługa"
+     ]
+    },
+    {
+     "kicker": "Co dalej",
+     "num": "od 180 zł",
+     "title": "netto za osobę. *Wycenę przygotujemy dla Was.*",
+     "size": 68,
+     "text": "Wysyłacie zapytanie, a nasz zespół przygotowuje wycenę dla Waszego biura.",
+     "cta": "Konfigurator Wigilii – link w bio",
+     "source": "Cena przykładowa: 50 osób, oprawa dźwiękowa i finger food. Ostateczna wycena indywidualna."
+    }
+   ]
+  },
+  {
+   "id": "33_gwiazdor",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Polska Wigilia · Wielkopolska",
+     "title": "Gwiazdor czy Mikołaj? *Zależy, skąd jesteście.*",
+     "size": 84,
+     "text": "W Wielkopolsce prezenty od pokoleń przynosi Gwiazdor."
+    },
+    {
+     "kicker": "Kim jest Gwiazdor",
+     "title": "Typowo *wielkopolski*",
+     "size": 84,
+     "rows": [
+      [
+       "Skąd",
+       "Opisywany już w XIX wieku w materiałach Oskara Kolberga."
+      ],
+      [
+       "Strój",
+       "Przypominał szaty biskupa. Towarzyszyły mu Gwiazdki – stąd nazwa."
+      ],
+      [
+       "Dziś",
+       "To wciąż żywa tradycja, choć nikt nie policzył, ilu domów dotyczy."
+      ]
+     ],
+     "source": "Źródło: prof. Andrzej Brencz, Instytut Etnologii i Antropologii Kulturowej UAM w Poznaniu (PAP, 21.12.2014)."
+    },
+    {
+     "kicker": "A we Wrocławiu?",
+     "title": "Każdy przy stole *ma swoją wersję*",
+     "size": 84,
+     "text": "Po 1945 r. ludność Dolnego Śląska wymieniła się niemal całkowicie, a z nią zwyczaje. Przy jednym firmowym stole spotykają się więc Gwiazdor, Mikołaj, Gwiazdka i Aniołek.",
+     "note": "Dobre pytanie na początek rozmowy: kto u Was przynosił prezenty?",
+     "source": "Źródło: wroclaw.pl, „Skąd się wzięły świąteczne tradycje?”."
+    }
+   ]
+  },
+  {
+   "id": "34_podlazniczka",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Polska Wigilia · dekoracje",
+     "title": "Choinka wisiała kiedyś *pod sufitem*",
+     "size": 88,
+     "text": "Nazywała się podłaźniczka: czubek jodły, świerka albo sosny, zawieszony często czubkiem w dół."
+    },
+    {
+     "kicker": "Podłaźniczka",
+     "title": "Zanim przyszła *choinka*",
+     "size": 80,
+     "rows": [
+      [
+       "Gdzie",
+       "W centralnym punkcie domu, często nad wigilijnym stołem."
+      ],
+      [
+       "Ozdoby",
+       "Bibuła, świeczki, jabłka, orzechy i przestrzenne ozdoby z opłatka."
+      ],
+      [
+       "Choinka",
+       "Stojące drzewko przyszło do Polski z Niemiec na przełomie XIX i XX wieku."
+      ]
+     ],
+     "source": "Źródła: A. Szepetiuk-Barańska, Muzeum Etnograficzne we Wrocławiu (PAP, za: Radio Kraków); D. Cetera, Muzeum Etnograficzne w Tarnowie (Radio Kraków)."
+    },
+    {
+     "kicker": "Co to znaczy dla Waszej firmy",
+     "title": "Dekoracja nad stołem *nie zajmuje podłogi*",
+     "size": 76,
+     "text": "W biurze każdy metr jest zajęty. Dekoracja zawieszona nad stołem wyznacza świąteczny środek pokoju bez przestawiania biurek. Scenografię dobieramy do Waszej przestrzeni.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  },
+  {
+   "id": "35_biuro-magazyn-showroom",
+   "theme": "violet",
+   "slides": [
+    {
+     "kicker": "Avufu Event",
+     "title": "Biuro, magazyn, showroom. *Każde może być salą.*",
+     "size": 84,
+     "text": "Robimy wydarzenia tam, gdzie pracujecie – albo w małej sali, jeśli wolicie."
+    },
+    {
+     "kicker": "Trzy przestrzenie",
+     "title": "Co daje *Wasze miejsce*",
+     "size": 80,
+     "list": [
+      "Biuro: wszyscy są na miejscu, nikt nie dojeżdża po pracy",
+      "Magazyn: dużo miejsca i wysoki sufit – na światło i scenografię",
+      "Showroom: wnętrze, które już pokazuje Waszą markę"
+     ]
+    },
+    {
+     "kicker": "Wrocław i okolice · Poznań i okolice",
+     "title": "Mała gala *we własnej przestrzeni*",
+     "size": 84,
+     "text": "Wy macie miejsce. My przywozimy światło, oprawę audio i scenografię, a wieczór prowadzi jeden opiekun.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  },
+  {
+   "id": "36_trzy-strefy",
+   "theme": "dark",
+   "slides": [
+    {
+     "kicker": "Wigilia w biurze · przestrzeń",
+     "title": "Trzy strefy Wigilii *w biurze*",
+     "size": 92,
+     "text": "Stół, miejsce do rozmów i spokojny kąt. Każdy wybiera, gdzie chce być."
+    },
+    {
+     "kicker": "Jak podzielić biuro",
+     "title": "Stół, rozmowy, *cisza*",
+     "size": 80,
+     "rows": [
+      [
+       "Stół",
+       "Poczęstunek i życzenia. Najlepiej w najjaśniejszym miejscu."
+      ],
+      [
+       "Rozmowy",
+       "Kilka stolików do stania, dalej od głośnika."
+      ],
+      [
+       "Cisza",
+       "Kąt z kanapą albo sala konferencyjna – dla tych, którzy wolą spokojniej."
+      ]
+     ]
+    },
+    {
+     "kicker": "Co to znaczy dla Waszej firmy",
+     "title": "Narysujcie plan, *zanim ustawicie stół*",
+     "size": 76,
+     "text": "Wystarczy rzut biura i trzy kolory: stół, rozmowy, cisza. Z takim planem łatwiej ustalić, gdzie potrzeba światła i dźwięku.",
+     "cta": "Konfigurator Wigilii – link w bio"
+    }
+   ]
+  }
+ ]
+}
