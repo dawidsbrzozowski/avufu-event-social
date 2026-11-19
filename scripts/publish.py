@@ -284,9 +284,9 @@ def main():
         networks = post.get("networks", ["instagram", "facebook"])
         # brak sekretow dla ktorejs zadanej sieci -> zostaw post w kolejce
         missing = []
-        if "instagram" in networks and not ig_creds(profile)[0]:
+        if "instagram" in networks and not all(ig_creds(profile)):
             missing.append("IG")
-        if "facebook" in networks and not fb_creds(profile)[0]:
+        if "facebook" in networks and not all(fb_creds(profile)):
             missing.append("FB")
         if missing:
             print(f"POMIJAM {os.path.basename(f)}: brak sekretow {'+'.join(missing)} "

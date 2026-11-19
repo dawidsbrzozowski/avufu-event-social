@@ -1,0 +1,13 @@
+{
+  "profile": "heritage",
+  "type": "story",
+  "publish_at": "2026-11-23T14:00:00+01:00",
+  "networks": [
+    "instagram",
+    "facebook"
+  ],
+  "media": [
+    "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/img-12.png"
+  ],
+  "status": "approved"
+}
