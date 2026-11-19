@@ -12,11 +12,12 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
 
 | Pole | Wymagane | Opis |
 |---|---|---|
-| `profile` | tak | `event` lub `training` — wybiera, których sekretów/kont użyć |
+| `profile` | tak | `event`, `training` lub `heritage` — wybiera, których sekretów/kont użyć |
+| `type` | nie | `feed` (domyślnie), `story` (Relacja 9:16, bez podpisu) albo `reel` (Rolka, wideo pionowe z podpisem) |
 | `publish_at` | tak | Data i godzina z przesunięciem strefy, ISO 8601. Warszawa zimą = `+01:00`, latem = `+02:00`. Brak pola = publikuj od razu. |
 | `networks` | nie | Lista: `["instagram","facebook"]` (domyślnie oba) |
-| `media` | tak | Lista PUBLICZNYCH linków do grafik. Grafiki wrzucamy do folderu `social/` tego repo, a link to `https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/....jpg`. 1 link = pojedynczy post, wiele = karuzela. |
-| `caption` | tak | Treść posta (hashtagi w treści). |
+| `media` | tak | Lista PUBLICZNYCH linków. Grafiki/wideo wrzucamy do folderu `social/` tego repo, link to `https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/....jpg`. **feed**: 1 link = post, wiele = karuzela. **story/reel**: 1 link (zdjęcie dla story, wideo `.mp4` dla reel / story-wideo). |
+| `caption` | feed/reel | Treść posta (hashtagi w treści). Story podpis ignoruje. |
 | `status` | — | Bramka publikacji. Publikowalne: brak pola / `"pending"` / `"approved"`. Pomijane (zostają w repo, nie publikują): `"draft"`, `"hold"`. Ustawia automat po próbie: `"published"` (sukces, plik → `published/`) albo `"error"` (błąd, zostaje tu z polem `error`). Dla postów z akceptacją Dawida użyj `"approved"`. |
 
 ## Przykład (pojedyncze zdjęcie)
@@ -46,16 +47,30 @@ do `published/`. Nieudane zostają tutaj ze statusem `error` i treścią błędu
 }
 ```
 
-## Przykład (rolka)
-Jeden link do pliku `.mp4` albo `.mov` w `media`. Instagram publikuje go jako rolkę, a Facebook jako wideo strony. Pole `cover` (link do JPG) jest opcjonalne i dotyczy Instagrama.
+## Przykład (Relacja / Story — 9:16, bez podpisu)
+`type: story`, jeden link w `media` (zdjęcie `.png/.jpg` albo wideo `.mp4`). IG publikuje jako Relację, FB jako Relację strony. Podpis jest ignorowany.
 ```json
 {
-  "profile": "training",
-  "publish_at": "2026-11-05T12:15:00+01:00",
+  "profile": "heritage",
+  "type": "story",
+  "publish_at": "2026-11-20T09:00:00+01:00",
   "networks": ["instagram", "facebook"],
-  "media": ["https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/training/2026-w45/rolka.mp4"],
-  "cover": "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/training/2026-w45/rolka-okladka.jpg",
-  "caption": "Treść...\n\n#szkolenia #HR",
+  "media": ["https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/img-01.png"],
+  "status": "approved"
+}
+```
+
+## Przykład (Rolka / Reel — wideo pionowe z podpisem)
+`type: reel`, jeden link `.mp4`/`.mov` w `media`. IG publikuje jako Reels, FB jako Reels strony. Pole `cover` (link do JPG) jest opcjonalne i dotyczy Instagrama.
+```json
+{
+  "profile": "heritage",
+  "type": "reel",
+  "publish_at": "2026-11-20T18:00:00+01:00",
+  "networks": ["instagram", "facebook"],
+  "media": ["https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/vid-01.mp4"],
+  "cover": "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/okladka.jpg",
+  "caption": "Treść rolki...\n\n#seekthecradle",
   "status": "approved"
 }
 ```

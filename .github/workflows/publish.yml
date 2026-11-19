@@ -40,6 +40,11 @@ jobs:
           TRAINING_IG_USER_ID:   ${{ secrets.TRAINING_IG_USER_ID }}
           TRAINING_FB_PAGE_TOKEN: ${{ secrets.TRAINING_FB_PAGE_TOKEN }}
           TRAINING_FB_PAGE_ID:    ${{ secrets.TRAINING_FB_PAGE_ID }}
+          # --- HERITAGE (Seek the Cradle, @seekthecradle) ---
+          HERITAGE_IG_TOKEN:      ${{ secrets.TRAINING_IG_TOKEN }}   # ten sam SUAT bota avufu-publisher-bot (IG @seekthecradle przypiete do bota -> bez regeneracji)
+          HERITAGE_IG_USER_ID:    ${{ secrets.HERITAGE_IG_USER_ID }} # IG Business Account id @seekthecradle (do uzupelnienia po odczycie z me/accounts)
+          HERITAGE_FB_PAGE_TOKEN: ${{ secrets.HERITAGE_FB_PAGE_TOKEN }}
+          HERITAGE_FB_PAGE_ID:    "61596935420553"                   # strona FB Seek the Cradle (jawne, nie-tajne)
         run: python scripts/publish.py
 
       - name: Zapisz zmiany w kolejce

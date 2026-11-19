@@ -13,17 +13,21 @@ Jak dziala:
   - udane przenosi do published/ (z linkiem do posta),
   - nieudane zostaja w queue/ ze statusem "error" i trescia bledu.
 
-Zero zaleznosci - tylko biblioteka standardowa Pythona.
-Uruchamiany przez .github/workflows/publish.yml (cron / recznie).
+Typy postow (pole "type"):
+  - "feed"  (domyslnie) - zdjecie / karuzela (IG wymaga <=4:5) / FB sam tekst,
+  - "story" - Relacja (IG Stories / FB photo_stories|video_stories), 9:16, bez podpisu,
+  - "reel"  - Rolka (IG Reels / FB video_reels), wideo pionowe 9:16, z podpisem.
+Zdjecie vs wideo rozpoznawane po rozszerzeniu media (.mp4/.mov = wideo).
+Dla reel opcjonalne pole "cover" (link do okladki JPG) dotyczy Instagrama.
 
-Sekrety (zmienne srodowiskowe), per profil (EVENT / TRAINING):
+Zero zaleznosci - tylko biblioteka standardowa Pythona.
+Uruchamiany przez .github/workflows/publish.yml (cron / recznie) albo lokalnie.
+
+Sekrety (zmienne srodowiskowe), per profil (EVENT / TRAINING / HERITAGE):
   <PROFIL>_IG_TOKEN        - token uzytkownika/System User z instagram_content_publish
   <PROFIL>_IG_USER_ID      - ID konta Instagram (Instagram Business Account)
   <PROFIL>_FB_PAGE_TOKEN   - token STRONY FB z pages_manage_posts (do publikacji na FB)
   <PROFIL>_FB_PAGE_ID      - ID strony FB
-
-Rolka: jeden link .mp4/.mov w "media". IG publikuje ja jako Reels, a FB jako
-wideo strony. Opcjonalne pole "cover" to link do okladki JPG.
 
 Pole "networks" w poscie wybiera sieci: ["instagram"], ["facebook"] albo oba.
 Post leci na dana siec tylko jesli sa jej sekrety; brak sekretow = post czeka
@@ -34,6 +38,11 @@ from datetime import datetime, timezone
 
 GRAPH = "https://graph.facebook.com/" + os.environ.get("GRAPH_VERSION", "v23.0")
 QUEUE_DIR, PUBLISHED_DIR, FAILED_DIR = "queue", "published", "failed"
+VIDEO_EXT = (".mp4", ".mov", ".m4v")
+
+
+def is_video(url):
+    return url.lower().split("?")[0].endswith(VIDEO_EXT)
 
 
 def ig_creds(profile):
@@ -53,13 +62,6 @@ def published_ok(result):
     return bool(result)
 
 
-def is_video(media):
-    """Rolka = dokladnie jeden link do pliku .mp4 albo .mov."""
-    if len(media) != 1:
-        return False
-    return urllib.parse.urlparse(media[0]).path.lower().endswith((".mp4", ".mov"))
-
-
 def api(path, params, method="POST"):
     data = urllib.parse.urlencode(params).encode()
     if method == "POST":
@@ -73,31 +75,46 @@ def api(path, params, method="POST"):
         raise RuntimeError(f"Graph API {e.code}: {e.read().decode()}")
 
 
-def wait_for_video(token, cid, timeout=300):
-    """IG przetwarza wideo dluzej niz grafike: czekamy na FINISHED."""
-    deadline = time.time() + timeout
-    while time.time() < deadline:
-        r = api(cid, {"fields": "status_code,status", "access_token": token}, "GET")
-        code = r.get("status_code")
-        if code == "FINISHED":
+def rupload(upload_url, token, file_url):
+    """Faza upload dla FB Reels/Stories wideo: Meta sama pobiera plik z file_url
+    (hosted upload), bez wysylania bajtow z naszej strony."""
+    req = urllib.request.Request(upload_url, data=b"", method="POST")
+    req.add_header("Authorization", f"OAuth {token}")
+    req.add_header("file_url", file_url)
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"rupload {e.code}: {e.read().decode()}")
+
+
+# ---------- Instagram ----------
+
+def ig_wait_container(token, cid, tries=30, delay=10):
+    """Wideo (Reels/Stories video) wymaga przetworzenia kontenera przed publikacja."""
+    for _ in range(tries):
+        st = api(cid, {"fields": "status_code", "access_token": token}, "GET").get("status_code")
+        if st == "FINISHED":
             return
-        if code in ("ERROR", "EXPIRED"):
-            raise RuntimeError(f"Instagram odrzucil wideo: {r}")
-        time.sleep(10)
-    raise RuntimeError(f"Instagram nie przetworzyl wideo w {timeout} s")
+        if st in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"IG kontener {st} ({cid})")
+        time.sleep(delay)
+    raise RuntimeError(f"IG kontener nie gotowy w czasie ({cid})")
 
 
-def publish_instagram(token, ig_id, media, caption, cover=None):
+def ig_publish_container(token, ig_id, cid):
+    mid = api(f"{ig_id}/media_publish", {"creation_id": cid, "access_token": token})["id"]
+    try:
+        return api(mid, {"fields": "permalink", "access_token": token}, "GET").get("permalink", mid)
+    except Exception:
+        return mid
+
+
+def publish_instagram(token, ig_id, media, caption):
+    """Feed: pojedyncze zdjecie lub karuzela."""
     if not ig_id:
         raise RuntimeError("brak IG_USER_ID")
-    if is_video(media):
-        params = {"media_type": "REELS", "video_url": media[0], "caption": caption,
-                  "share_to_feed": "true", "access_token": token}
-        if cover:
-            params["cover_url"] = cover
-        cid = api(f"{ig_id}/media", params)["id"]
-        wait_for_video(token, cid)
-    elif len(media) == 1:
+    if len(media) == 1:
         cid = api(f"{ig_id}/media",
                   {"image_url": media[0], "caption": caption, "access_token": token})["id"]
     else:
@@ -109,34 +126,69 @@ def publish_instagram(token, ig_id, media, caption, cover=None):
         cid = api(f"{ig_id}/media",
                   {"media_type": "CAROUSEL", "children": ",".join(children),
                    "caption": caption, "access_token": token})["id"]
-    if not is_video(media):
-        time.sleep(6)  # IG potrzebuje chwili na przetworzenie kontenera
-    mid = api(f"{ig_id}/media_publish", {"creation_id": cid, "access_token": token})["id"]
-    try:
-        return api(mid, {"fields": "permalink", "access_token": token}, "GET").get("permalink", mid)
-    except Exception:
-        return mid
+    time.sleep(6)  # IG potrzebuje chwili na przetworzenie kontenera
+    return ig_publish_container(token, ig_id, cid)
+
+
+def publish_instagram_story(token, ig_id, url):
+    """Relacja IG (9:16). Zdjecie albo wideo. Bez podpisu."""
+    if not ig_id:
+        raise RuntimeError("brak IG_USER_ID")
+    key = "video_url" if is_video(url) else "image_url"
+    cid = api(f"{ig_id}/media",
+              {"media_type": "STORIES", key: url, "access_token": token})["id"]
+    if is_video(url):
+        ig_wait_container(token, cid)
+    else:
+        time.sleep(6)
+    return ig_publish_container(token, ig_id, cid)
+
+
+def publish_instagram_reel(token, ig_id, url, caption, cover=None, share_to_feed=True):
+    """Rolka IG. Wideo pionowe 9:16, z podpisem. Opcjonalna okladka (cover)."""
+    if not ig_id:
+        raise RuntimeError("brak IG_USER_ID")
+    params = {"media_type": "REELS", "video_url": url, "caption": caption,
+              "share_to_feed": "true" if share_to_feed else "false",
+              "access_token": token}
+    if cover:
+        params["cover_url"] = cover
+    cid = api(f"{ig_id}/media", params)["id"]
+    ig_wait_container(token, cid)
+    return ig_publish_container(token, ig_id, cid)
+
+
+# ---------- Facebook ----------
+
+def fb_wait_video(token, vid, tries=36, delay=5):
+    """Czeka az FB przetworzy wgrane wideo (Reels/Stories)."""
+    for _ in range(tries):
+        try:
+            st = api(vid, {"fields": "status", "access_token": token}, "GET").get("status", {})
+        except RuntimeError:
+            time.sleep(delay); continue
+        phase = (st.get("processing_phase") or {}).get("status") or st.get("video_status")
+        if phase in ("complete", "ready", "published"):
+            return
+        if phase == "error":
+            raise RuntimeError(f"FB wideo ERROR ({vid}): {st}")
+        time.sleep(delay)
+    # nie podnosimy wyjatku - finish z video_state=PUBLISHED opublikuje po przetworzeniu
 
 
 def publish_facebook(token, page_id, media, caption):
-    """Publikuje na stronie FB. Zdjecie -> /photos, wiele zdjec -> /feed z
-    attached_media, brak zdjec -> /feed (post tekstowy), plik .mp4/.mov ->
-    /videos. Zwraca link lub id."""
+    """Feed: zdjecie -> /photos, wiele zdjec -> /feed z attached_media,
+    brak zdjec -> /feed (post tekstowy). Zwraca link lub id."""
     if not page_id:
         raise RuntimeError("brak FB_PAGE_ID")
     if not media:
         pid = api(f"{page_id}/feed", {"message": caption, "access_token": token})["id"]
         return f"https://www.facebook.com/{pid}"
-    if is_video(media):
-        vid = api(f"{page_id}/videos",
-                  {"file_url": media[0], "description": caption, "access_token": token})["id"]
-        return f"https://www.facebook.com/{page_id}/videos/{vid}"
     if len(media) == 1:
         r = api(f"{page_id}/photos",
                 {"url": media[0], "caption": caption, "access_token": token})
         pid = r.get("post_id") or r.get("id")
         return f"https://www.facebook.com/{pid}"
-    # wiele zdjec: wgraj kazde jako nieopublikowane, potem jeden post z galeria
     attached = {}
     for i, m in enumerate(media):
         fbid = api(f"{page_id}/photos",
@@ -146,6 +198,56 @@ def publish_facebook(token, page_id, media, caption):
     params.update(attached)
     pid = api(f"{page_id}/feed", params)["id"]
     return f"https://www.facebook.com/{pid}"
+
+
+def publish_facebook_story(token, page_id, url):
+    """Relacja FB. Zdjecie (photo_stories) albo wideo (video_stories)."""
+    if not page_id:
+        raise RuntimeError("brak FB_PAGE_ID")
+    if is_video(url):
+        start = api(f"{page_id}/video_stories", {"upload_phase": "start", "access_token": token})
+        vid, up = start["video_id"], start["upload_url"]
+        rupload(up, token, url)
+        fb_wait_video(token, vid)
+        api(f"{page_id}/video_stories",
+            {"upload_phase": "finish", "video_id": vid, "access_token": token})
+        return f"story-video:{vid}"
+    photo_id = api(f"{page_id}/photos",
+                   {"url": url, "published": "false", "access_token": token})["id"]
+    r = api(f"{page_id}/photo_stories", {"photo_id": photo_id, "access_token": token})
+    return r.get("post_id") or f"story-photo:{photo_id}"
+
+
+def publish_facebook_reel(token, page_id, url, caption):
+    """Rolka FB. Wideo pionowe 9:16, z opisem."""
+    if not page_id:
+        raise RuntimeError("brak FB_PAGE_ID")
+    start = api(f"{page_id}/video_reels", {"upload_phase": "start", "access_token": token})
+    vid, up = start["video_id"], start["upload_url"]
+    rupload(up, token, url)
+    fb_wait_video(token, vid)
+    api(f"{page_id}/video_reels",
+        {"upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED",
+         "description": caption, "access_token": token})
+    return f"https://www.facebook.com/reel/{vid}"
+
+
+# ---------- rozdzielacz typow ----------
+
+def do_instagram(ptype, token, ig_id, media, caption, cover=None):
+    if ptype == "story":
+        return publish_instagram_story(token, ig_id, media[0])
+    if ptype == "reel":
+        return publish_instagram_reel(token, ig_id, media[0], caption, cover)
+    return publish_instagram(token, ig_id, media, caption)
+
+
+def do_facebook(ptype, token, page_id, media, caption):
+    if ptype == "story":
+        return publish_facebook_story(token, page_id, media[0])
+    if ptype == "reel":
+        return publish_facebook_reel(token, page_id, media[0], caption)
+    return publish_facebook(token, page_id, media, caption)
 
 
 def is_due(post):
@@ -176,7 +278,9 @@ def main():
             print(f"Jeszcze nie czas: {os.path.basename(f)} ({post.get('publish_at')})")
             continue
         profile = post.get("profile", "event")
+        ptype = post.get("type", "feed")
         media, caption = post.get("media", []), post.get("caption", "")
+        cover = post.get("cover")
         networks = post.get("networks", ["instagram", "facebook"])
         # brak sekretow dla ktorejs zadanej sieci -> zostaw post w kolejce
         missing = []
@@ -192,17 +296,17 @@ def main():
         try:
             if "instagram" in networks and not published_ok(results.get("instagram")):
                 tok, ig = ig_creds(profile)
-                results["instagram"] = publish_instagram(tok, ig, media, caption, post.get("cover"))
+                results["instagram"] = do_instagram(ptype, tok, ig, media, caption, cover)
             if "facebook" in networks and not published_ok(results.get("facebook")):
                 tok, page = fb_creds(profile)
-                results["facebook"] = publish_facebook(tok, page, media, caption)
+                results["facebook"] = do_facebook(ptype, tok, page, media, caption)
             post.update(status="published",
                         published_at=datetime.now(timezone.utc).isoformat(),
                         results=results)
             with open(os.path.join(PUBLISHED_DIR, os.path.basename(f)), "w", encoding="utf-8") as fh:
                 json.dump(post, fh, ensure_ascii=False, indent=2)
             os.remove(f)
-            print(f"OPUBLIKOWANO {os.path.basename(f)} -> {results}")
+            print(f"OPUBLIKOWANO {os.path.basename(f)} ({ptype}) -> {results}")
             done += 1
         except Exception as e:
             post.update(status="error", error=str(e), results=results)
