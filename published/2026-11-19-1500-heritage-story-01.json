@@ -1,0 +1,18 @@
+{
+  "profile": "heritage",
+  "type": "story",
+  "publish_at": "2026-11-19T14:35:00+01:00",
+  "networks": [
+    "instagram",
+    "facebook"
+  ],
+  "media": [
+    "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/img-01.png"
+  ],
+  "status": "published",
+  "published_at": "2026-11-19T13:46:40.059735+00:00",
+  "results": {
+    "instagram": "https://www.instagram.com/stories/seekthecradle/4033879933839508544",
+    "facebook": "1665876904944653"
+  }
+}
