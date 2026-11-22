@@ -9,5 +9,10 @@
   "media": [
     "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/img-09.png"
   ],
-  "status": "approved"
+  "status": "published",
+  "published_at": "2026-11-22T17:58:59.205332+00:00",
+  "results": {
+    "instagram": "https://www.instagram.com/stories/seekthecradle/4036181271218956061",
+    "facebook": "1464508908519018"
+  }
 }

@@ -1,0 +1,19 @@
+{
+  "profile": "heritage",
+  "type": "reel",
+  "publish_at": "2026-11-22T18:00:00+01:00",
+  "networks": [
+    "instagram",
+    "facebook"
+  ],
+  "media": [
+    "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/vid-04.mp4"
+  ],
+  "status": "published",
+  "caption": "From a surname to a village. From a village to a story.\n\nDiscover where you truly come from — step by step.\n\n#PolishGenealogy #Roots #Ancestry #Poland #FamilyHistory #Heritage #seekthecradle",
+  "published_at": "2026-11-22T18:03:02.010731+00:00",
+  "results": {
+    "instagram": "https://www.instagram.com/reel/DgDZcW2ElHK/",
+    "facebook": "https://www.facebook.com/reel/3456772757842673"
+  }
+}
