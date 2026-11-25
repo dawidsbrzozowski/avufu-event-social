@@ -1,0 +1,15 @@
+{
+  "profile": "heritage",
+  "type": "feed",
+  "publish_at": "2026-12-24T20:00:00+01:00",
+  "networks": [
+    "instagram",
+    "facebook"
+  ],
+  "media": [
+    "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/kampania/P29.png"
+  ],
+  "caption_fb": "Wesołych Świąt (veh-SOH-wikh SHFYONT). Merry Christmas.\n\nSomewhere in Poland tonight, a bell still rings for your family.\n\nThank you for being here this season.\nSeek the Cradle\n\n#PolishGenealogy #PolishAmerican #PolishRoots",
+  "caption_ig": "Wesołych Świąt (veh-SOH-wikh SHFYONT). Merry Christmas.\n\nSomewhere in Poland tonight, a bell still rings for your family.\n\nThank you for being here this season.\nSeek the Cradle\n\n#PolishGenealogy #PolishAmerican #PolishHeritage #PolishRoots #Genealogy #FamilyHistory #WesolychSwiat #MerryChristmas #PolishChristmas",
+  "status": "approved"
+}

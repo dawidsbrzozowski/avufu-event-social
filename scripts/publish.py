@@ -280,6 +280,10 @@ def main():
         profile = post.get("profile", "event")
         ptype = post.get("type", "feed")
         media, caption = post.get("media", []), post.get("caption", "")
+        # Opcjonalnie rozne podpisy per siec (np. IG: "Link in bio" + wiecej hashtagow,
+        # FB: klikalny link). Brak -> wspolny "caption".
+        cap_ig = post.get("caption_ig") or caption
+        cap_fb = post.get("caption_fb") or caption
         cover = post.get("cover")
         networks = post.get("networks", ["instagram", "facebook"])
         # brak sekretow dla ktorejs zadanej sieci -> zostaw post w kolejce
@@ -296,10 +300,10 @@ def main():
         try:
             if "instagram" in networks and not published_ok(results.get("instagram")):
                 tok, ig = ig_creds(profile)
-                results["instagram"] = do_instagram(ptype, tok, ig, media, caption, cover)
+                results["instagram"] = do_instagram(ptype, tok, ig, media, cap_ig, cover)
             if "facebook" in networks and not published_ok(results.get("facebook")):
                 tok, page = fb_creds(profile)
-                results["facebook"] = do_facebook(ptype, tok, page, media, caption)
+                results["facebook"] = do_facebook(ptype, tok, page, media, cap_fb)
             post.update(status="published",
                         published_at=datetime.now(timezone.utc).isoformat(),
                         results=results)
