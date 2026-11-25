@@ -47,14 +47,14 @@ def main():
         post = {
             "profile": "heritage",
             "type": "feed",
-            "publish_at": f"{date}T20:00:00+01:00",
+            "publish_at": f"{date}T07:00:00-05:00",  # 7:00 ET (EST, zima) = 12:00 UTC = 13:00 PL
             "networks": ["instagram", "facebook"],
             "media": media,
             "caption_fb": cap_fb,
             "caption_ig": cap_ig,
             "status": "approved",
         }
-        fname = f"{date}-2000-heritage-{nr.lower()}.json"
+        fname = f"{date}-0700et-heritage-{nr.lower()}.json"
         with open(os.path.join(QUEUE, fname), "w", encoding="utf-8") as fh:
             json.dump(post, fh, ensure_ascii=False, indent=2)
         made += 1

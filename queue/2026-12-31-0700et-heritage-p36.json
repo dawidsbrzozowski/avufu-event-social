@@ -1,0 +1,15 @@
+{
+  "profile": "heritage",
+  "type": "feed",
+  "publish_at": "2026-12-31T07:00:00-05:00",
+  "networks": [
+    "instagram",
+    "facebook"
+  ],
+  "media": [
+    "https://raw.githubusercontent.com/dawidsbrzozowski/avufu-event-social/main/social/heritage/kampania/P36.png"
+  ],
+  "caption_fb": "Szczęśliwego Nowego Roku (shchen-shlee-VEH-go noh-VEH-go ROH-koo). Happy New Year.\n\nEvery search begins with one small step: a name, a call, an old card in a drawer.\n\nMay this be the year you find the village. We'll be here with the next step.\n\n#PolishGenealogy #PolishAmerican #PolishRoots",
+  "caption_ig": "Szczęśliwego Nowego Roku (shchen-shlee-VEH-go noh-VEH-go ROH-koo). Happy New Year.\n\nEvery search begins with one small step: a name, a call, an old card in a drawer.\n\nMay this be the year you find the village. We'll be here with the next step.\n\n#PolishGenealogy #PolishAmerican #PolishHeritage #PolishRoots #Genealogy #FamilyHistory #HappyNewYear #NowyRok #FamilyHistory",
+  "status": "approved"
+}
